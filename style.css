@@ -1,18 +1,43 @@
-#header {
-    background: url("image/header.jpg");
+header {
     position: fixed;
     align-items: center;
     top: 0;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
     width: 100%;
-    height: 10%;
+
     left : 0;
 }
-.barre_search{
-    border: 1px solid black;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.box{
+.container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin-left: 70px;
+}
+
+.input-wrapper {
+    flex: 1;
+    margin: 0 10px;
+
+}
+
+.input {
+    margin-left: 40px;
+    width: 80%;
+    font-size: 16px;
+    border: 1px solid rgb(241, 238, 237);
+    border-radius: 25px;
+    transition: all 0.4s ease 0s;
+}
+
+.buttons-wrapper {
+    margin-right: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    margin-right: 10px;
 }
