@@ -1,0 +1,2 @@
+alter table recette
+add constraint ck_diffcultés check( Difficultés >= 1 AND Difficultés <= 5);
