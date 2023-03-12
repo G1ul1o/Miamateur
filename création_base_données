@@ -1,0 +1,74 @@
+CREATE TABLE Ustensiles(
+   Nom_Ustensiles VARCHAR(50),
+   Description VARCHAR(150),
+   PRIMARY KEY(Nom_Ustensiles)
+);
+
+CREATE TABLE Ingrédients(
+   Nom_ingédients VARCHAR(50),
+   Justification_de_l_utilisation VARCHAR(50),
+   PRIMARY KEY(Nom_ingédients)
+);
+
+CREATE TABLE Tag(
+   Nom_tag VARCHAR(50),
+   PRIMARY KEY(Nom_tag)
+);
+
+CREATE TABLE Utilisateur(
+   Mail_utilisateur VARCHAR(50),
+   Mot_de_passe VARCHAR(50),
+   Profil VARCHAR(50),
+   PRIMARY KEY(Mail_utilisateur, Mot_de_passe)
+);
+
+CREATE TABLE Images(
+   lien_images VARCHAR(100),
+   Nom_ingédients VARCHAR(50) NOT NULL,
+   Nom_Ustensiles VARCHAR(50) NOT NULL,
+   PRIMARY KEY(lien_images),
+   UNIQUE(Nom_ingédients),
+   UNIQUE(Nom_Ustensiles),
+   FOREIGN KEY(Nom_ingédients) REFERENCES Ingrédients(Nom_ingédients),
+   FOREIGN KEY(Nom_Ustensiles) REFERENCES Ustensiles(Nom_Ustensiles)
+);
+CREATE TABLE Recette(
+   id INT,
+   Nom_recette VARCHAR(50) NOT NULL,
+   Temps_de_préparation INT NOT NULL,
+   Description VARCHAR(250) NOT NULL,
+   Difficultés INT NOT NULL,
+   Validés boolean,
+   Budget DECIMAL(15,2) NOT NULL,
+   Mail_utilisateur VARCHAR(50),
+   Mot_de_passe VARCHAR(50),
+   PRIMARY KEY(id),
+   FOREIGN KEY(Mail_utilisateur, Mot_de_passe) REFERENCES Utilisateur(Mail_utilisateur, Mot_de_passe)
+);
+
+CREATE TABLE Etapes_de_préparations(
+   id VARCHAR(50),
+   Numéro_de_l_étape INT NOT NULL,
+   Guidage VARCHAR(250) NOT NULL,
+   id_1 INT,
+   PRIMARY KEY(id),
+   FOREIGN KEY(id_1) REFERENCES Recette(id)
+);
+
+CREATE TABLE reconnaisable_par(
+   id INT,
+   Nom_tag VARCHAR(50),
+   PRIMARY KEY(id, Nom_tag),
+   FOREIGN KEY(id) REFERENCES Recette(id),
+   FOREIGN KEY(Nom_tag) REFERENCES Tag(Nom_tag)
+);
+
+CREATE TABLE Nécessite(
+   id INT,
+   Nom_Ustensiles VARCHAR(50),
+   Nom_ingédients VARCHAR(50),
+   PRIMARY KEY(id, Nom_Ustensiles, Nom_ingédients),
+   FOREIGN KEY(id) REFERENCES Recette(id),
+   FOREIGN KEY(Nom_Ustensiles) REFERENCES Ustensiles(Nom_Ustensiles),
+   FOREIGN KEY(Nom_ingédients) REFERENCES Ingrédients(Nom_ingédients)
+);
