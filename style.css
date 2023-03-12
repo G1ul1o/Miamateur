@@ -88,3 +88,11 @@ nav{
     position: fixed;
     top : 80px;
 }
+
+.scrolable{
+    display : none;
+    overflow: scroll;
+    width: 80%;
+    left : 60px;
+
+}

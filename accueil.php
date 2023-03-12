@@ -1,3 +1,11 @@
+<?php
+    include 'php/connection.php';
+    $sql = 'SELECT * FROM recette ';
+    $table = $connection->query($sql);
+    $ligne = $table->fetch();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,5 +64,12 @@
             </ul>
         </li>
     </nav>
+    <div class="scrolable">
+        <div>
+            <img src="<?= base64_encode($ligne['image']) ?>"  width = "50px" height = "50px" alt="">
+            <h2><?= $ligne['nom'] ?></h2>
+            <p><?= $ligne['description'] ?></p>
+        </div>
+    </div>
 </body>
 </html>
