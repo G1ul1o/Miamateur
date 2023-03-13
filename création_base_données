@@ -33,7 +33,7 @@ CREATE TABLE Images(
    FOREIGN KEY(Nom_Ustensiles) REFERENCES Ustensiles(Nom_Ustensiles)
 );
 CREATE TABLE Recette(
-   id_projet Int AUTO_INCREMENT,
+   id Int AUTO_INCREMENT,
    Nom_recette VARCHAR(50) NOT NULL,
    Temps_de_préparation INT NOT NULL,
    Description VARCHAR(250) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE Etapes_de_préparations(
 );
 
 CREATE TABLE reconnaisable_par(
-   id_projet Int AUTO_INCREMENT,
+   id Int AUTO_INCREMENT,
    Nom_tag VARCHAR(50),
    PRIMARY KEY(id, Nom_tag),
    FOREIGN KEY(id) REFERENCES Recette(id),
@@ -64,7 +64,7 @@ CREATE TABLE reconnaisable_par(
 );
 
 CREATE TABLE Nécessite(
-   id_projet Int AUTO_INCREMENT,
+   id Int AUTO_INCREMENT,
    Nom_Ustensiles VARCHAR(50),
    Nom_ingédients VARCHAR(50),
    PRIMARY KEY(id, Nom_Ustensiles, Nom_ingédients),
