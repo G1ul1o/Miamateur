@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <link rel="stylesheet" href="Header.css">
+    <script src="Header.js" defer></script>
     <meta charset="UTF-8">
-    <title>Foooter</title>
+    <title>Acceuil</title>
 </head>
 <body>
-    <header></header>
+<header id="header">
+    <div class="container">
+        <!-- utile pour plus tard quand il faudra faire es fenetre responsive
+        <button class="navbutton" id="navbutton" onclick="changeDisplay()">
+            <img id="image_menu_deroulant" src="images/menu.png" alt="bouton menu déroulants">
+        </button>
+        -->
+        <h1 class="title">Miamateur</h1>
+
+        <div class="input-wrapper">
+
+            <input type="text" class="input" placeholder="Rechercher">
+            <button class="button">Rechercher</button>
+
+        </div>
+        <div class="buttons-wrapper">
+            <button class="button">Connexion</button>
+            <button class="button">Inscription</button>
+        </div>
+    </div>
+    <<div class="bouton">
+    <p><button><a href="https://miamateur.000webhostapp.com/"target="_blank">Accueil</a></button></p>
+    <p><button><a href="https://www.twitch.tv/otplol_"target="_blank">Moins de 5 €</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Une seule poêle</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Végétarien</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Moins de 5 min</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Au micro-onde</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Espace entreprise</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">A propos</a></button></p>
+    <p><button><a href="http://twitch.com"target="_blank">Contact</a></button></p>
+</div>
+</header>
+<nav id="nav">
+    <li id="li1">
+        <a>Recettes</a>
+        <ul id="ul1">
+            <li><a>Entrées</a></li>
+            <li><a >Plats</a></li>
+            <li><a>Desserts</a></li>
+        </ul>
+    </li>
+    <li id="li2">
+        <a>Recettes</a>
+        <ul id="ul2">
+            <li><a>Entrées</a></li>
+            <li><a >Plats</a></li>
+            <li><a>Desserts</a></li>
+        </ul>
+    </li>
+    <li id="li3">
+        <a>Recettes</a>
+        <ul id="ul3">
+            <li><a>Entrées</a></li>
+            <li><a >Plats</a></li>
+            <li><a>Desserts</a></li>
+        </ul>
+    </li>
+    <li id="li4">
+        <a>Recettes</a>
+        <ul id="ul4">
+            <li><a>Entrées</a></li>
+            <li><a >Plats</a></li>
+            <li><a>Desserts</a></li>
+        </ul>
+    </li>
+</nav>
+<div class="scrolable">
+    <div>
+        <img src="<?= base64_encode($ligne['image']) ?>"  width = "50px" height = "50px" alt="">
+        <h2><?= $ligne['nom'] ?></h2>
+        <p><?= $ligne['description'] ?></p>
+    </div>
+</div>
 </body>
 </html>
