@@ -1,0 +1,85 @@
+
+.section h2{
+    border: 5px solid;
+    border-color: #bed08c;
+    border-radius: 25px;
+    padding:1%;
+    width: 50%;
+    margin:0 auto 5%; /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
+    text-align: center;
+}
+
+.alignement div{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.alignement{
+    display: flex;
+    justify-content: space-between;
+}
+
+.picture {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+.conteneur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-top: 5%;
+ }
+
+.rectangle {
+    width: 90%;
+    height: 60%;
+    background-color: #bed08c; /* Couleur rouge */
+}
+
+.button
+{
+    padding: 1% 2%;
+    font-size: 100%;
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #bed08c;
+    color: white;
+    border:none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10%;
+}
+
+.block{
+    flex-basis: 33.33%;
+    justify-content: center;
+    position: relative;
+}
+
+.block img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.alignement {
+    text-align: center;
+}
+
+.block button {
+    position: absolute;
+    font-size: 100%;
+    left:50%;
+    transform : translateX(-50%);
+    border-radius: 25px;
+    background-color: #bed08c;
+    color: white;
+    border:none;
+}
