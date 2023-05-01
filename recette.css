@@ -1,15 +1,12 @@
 .introduction {
     position: static;
     display: inline-block;
-
 }
 .presentation {
     width: 25%;
     height: auto;
     display: inline-block;
     margin :2%;
-
-
 }
 
 
@@ -35,11 +32,8 @@ img {
     display: inline-block;
     vertical-align: top;
     width: 60%;
-
-
 }
 .titre {
-
     font-size: 140%;
     color : #bed08c;
    /* Ajout de la largeur de 20% */
@@ -64,8 +58,6 @@ img {
     border-radius: 25px;
     padding:1%;
     margin:0% /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
-
-
 }
 
 
@@ -74,7 +66,6 @@ img {
     display: inline-block;
     font-size:140%;
     margin-bottom: 5%;
-
 }
 
 .élément{
@@ -82,7 +73,6 @@ img {
     position: static;
     margin-left:2%;
     display: inline-block;
-
 }
 .élément h3
 {
@@ -127,7 +117,6 @@ li::before {
     margin-left:2%;
     width: 90%;
     background-color: #F4F6EDFF;
-
 }
 .Recette dt {
     font-size:200%;
@@ -149,7 +138,6 @@ li::before {
 }
 
 .Recette h3 {
-
     margin-top: 0;
     margin-left: 0.5%;
     font-style: normal;
@@ -157,7 +145,6 @@ li::before {
 }
 
 .Recette p {
-
     margin-top: 0;
     margin-left: 0.5%;
     font-style: normal;

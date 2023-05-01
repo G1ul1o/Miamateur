@@ -29,7 +29,7 @@
             <img src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
         </div>
         <div class="miniatures">
-            <?php foreach ($recette_result as $row): ?>
+            <?php foreach ($recette as $row): ?>
                 <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
             <?php endforeach; ?>
         </div>

@@ -11,14 +11,56 @@
 ?>
 
 <!DOCTYPE html>
-<<html lang="en">
->
+<html lang="en">
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
         <meta charset="utf-8">
         <title>Miamateur</title>
 
     </head>
+    <!--Header-->
+    <header id="header">
+        <div class="container">
+            <!-- utile pour plus tard quand il faudra faire es fenetre responsive
+            <button class="navbutton" id="navbutton" onclick="changeDisplay()">
+                <img id="image_menu_deroulant" src="images/menu.png" alt="bouton menu déroulant">
+            </button>
+            -->
+            <!-- logo -->
+            <img class="img" src="image/image-removebg-preview.jpg" alt="logo" width="80" height="80">
+
+            <!-- titre -->
+            <h1 class="title">Miamateur</h1>
+
+            <div class="input-wrapper">
+                <input type="text" class="input" placeholder="Recherche">
+                <button class="search-button">
+                    <span class="search-icon"></span>
+                </button>
+            </div>
+
+            <div class="buttons-wrapper">
+                <button class="button">Mon compte</button>
+            </div>
+        </div>
+
+        <div class="alignement_cote">
+            <div class="alignement">
+                <header-button><a class="active header-button" href="Header.html" target="_blank">Accueil</a></header-button>
+                <header-button><a class="header-button" href="https://www.twitch.tv/otplol_" target="_blank">Moins de 5 €</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Une seule poêle</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Végétarien</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Moins de 5 min</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Au micro-onde</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Espace entreprise</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">A propos</a></header-button>
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Contact</a></header-button>
+            </div>
+        </div>
+
+        <div class="blanc"></div>
+    </header>
     <body>
         <!--Sélection-->
         <div>
