@@ -1,3 +1,172 @@
+header {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    box-shadow: 10px 0 20px 0 rgba(0,0,0,0.5);
+    width: 100%;
+    left : 0;
+    z-index: 999; /* assurez-vous que le z-index de l'en-tête est plus élevé que celui des autres éléments de la page */
+    background-color: white;
+}
+body {
+    margin-top: 150px; /* Ajuster la valeur en fonction de la hauteur du header */
+}
+
+#image_menu_deroulant{
+    width: 40px;
+    height: 40px;
+    border: unset;
+}
+.navbutton{
+    margin-left: 70px;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border: unset;
+    transition: all 0.4s ease 0s;
+    background-color: white;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-family: "Arial", sans-serif;
+    color : #93c47d;
+    margin-left: 70px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex: 1;
+    border-radius: 50px;
+    border: 1px solid rgb(241, 238, 237);
+    transition: all 0.4s ease 0s;
+
+}
+
+.input {
+    display: flex;
+    width:100%;
+    font-size: 18px;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    margin-right: 10px;
+    border: 1px solid rgb(241, 238, 237);
+}
+
+.button {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #93c47d, #76a5af);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #93c47d, #76a5af);
+}
+
+
+
+.search-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ddd;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/116/116836.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.header-button {
+    font-family: "Arial", sans-serif;
+    color : #808080;
+    text-decoration:none;
+    border-width : 10px;
+    width: 2%;
+
+}
+.alignement_cote {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+.bouton-du-header {
+    width: 100%;
+
+}
+
+.alignement {
+    width: 90%; /* ajustez la largeur selon vos besoins */
+    margin: auto; /* centre horizontalement */
+    text-align: center; /* centre le contenu de la div */
+    display: flex;
+    justify-content: space-between;
+}
+
+.active {
+    color : #93c47d;
+    font-family: "Arial", sans-serif;
+
+    text-decoration:none;
+    border-width : 10px;
+    width: 2%;
+}
+
+.blanc{
+    height: 10px;
+}
+
+
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+}
+
 .introduction {
     position: static;
     display: inline-block;
@@ -10,7 +179,7 @@
 }
 
 
-img {
+.allimg {
     width: 100%;
     height: 100%;
 }

@@ -22,11 +22,53 @@
     <title>Miamateur: Plat</title>
     <link rel="stylesheet" href="recette.css">
 </head>
+<!--Header-->
+<header id="header">
+    <div class="container">
+        <!-- utile pour plus tard quand il faudra faire es fenetre responsive
+        <button class="navbutton" id="navbutton" onclick="changeDisplay()">
+            <img id="image_menu_deroulant" src="images/menu.png" alt="bouton menu déroulant">
+        </button>
+        -->
+        <!-- logo -->
+        <img class="img_h" src="image/image-removebg-preview.jpg" alt="logo" width="80" height="80">
+
+        <!-- titre -->
+        <h1 class="title">Miamateur</h1>
+
+        <div class="input-wrapper">
+            <input type="text" class="input" placeholder="Recherche">
+            <button class="search-button">
+                <span class="search-icon"></span>
+            </button>
+        </div>
+
+        <div>
+            <button class="button">Mon compte</button>
+        </div>
+    </div>
+
+    <div class="alignement_cote">
+        <div class="alignement">
+            <header-button><a class="active header-button" href="Header.html" target="_blank">Accueil</a></header-button>
+            <header-button><a class="header-button" href="https://www.twitch.tv/otplol_" target="_blank">Moins de 5 €</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Une seule poêle</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Végétarien</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Moins de 5 min</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Au micro-onde</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Espace entreprise</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">A propos</a></header-button>
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Contact</a></header-button>
+        </div>
+    </div>
+
+    <div class="blanc"></div>
+</header>
 <body>
 <div class="introduction">
     <div class="presentation">
         <div class="photo">
-            <img src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
+            <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
         </div>
         <div class="miniatures">
             <?php foreach ($recette as $row): ?>
