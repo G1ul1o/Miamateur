@@ -11,3 +11,16 @@ function changeDisplay(){
     }
     console.log(nav.style);
 }
+
+
+
+
+
+
+var input = document.querySelector('input');
+input.addEventListener('focus', function() {
+    input.setAttribute('placeholder', '');
+});
+input.addEventListener('blur', function() {
+    input.setAttribute('placeholder', 'Recherche');
+});
