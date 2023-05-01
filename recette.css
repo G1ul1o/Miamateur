@@ -174,8 +174,8 @@ input:-ms-input-placeholder {
     display: inline-block;
 }
 .presentation {
-    width: 25%;
-    height: auto;
+    width: 35%;
+    height: 35%;
     display: inline-block;
     margin :2%;
 }
