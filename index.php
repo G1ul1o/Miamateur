@@ -41,7 +41,7 @@
             </div>
 
             <div class="buttons-wrapper">
-                <button class="button">Mon compte</button>
+                <button class="buttonH">Mon compte</button>
             </div>
         </div>
 

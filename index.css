@@ -30,6 +30,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10%;
+
 }
 
 .title {
@@ -60,12 +62,12 @@ body {
     justify-content: flex-end;
 }
 
-.button {
+.buttonH{
     margin-right: 10px;
     border: 1px solid rgb(241, 238, 237);
 }
 
-.button {
+.buttonH{
     display: inline-block;
     padding: 3px 5px;
     border-radius: 15px;
@@ -216,12 +218,7 @@ input:-ms-input-placeholder {
     border:none;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 10%;
-}
+
 
 .block{
     flex-basis: 33.33%;
