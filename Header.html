@@ -10,40 +10,49 @@
 <body>
 <header id="header">
     <div class="container">
-        <!-- utile pour plus tard quand il faudra faire es fenetre responsive
-        <button class="navbutton" id="navbutton" onclick="changeDisplay()">
-            <img id="image_menu_deroulant" src="images/menu.png" alt="bouton menu déroulants">
-        </button>
-        -->
-        <span style="margin-left: 20px;"></span> <! --marge gauche -->
-        <! -- logo -->
-        <img class="img" src = "images/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
-        <! -- titre -->
-        <h1 class="title">Miamateur</h1>
+        <!-- marge gauche -->
+        <span style="margin-left: 3%;"></span>
 
+        <!-- logo -->
+        <a href="Header.html" >
+            <img  src = "images/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
+        </a>
 
-        <span style="margin-left: 100px;"></span> <! --marge gauche -->
+        <!-- titre -->
+        <a href="Header.html" >
+            <h1 class="button-title">Miamateur</h1>
+        </a>
 
+        <!-- marge centre gauche -->
+        <span style="margin-left: 10%;"></span>
+
+        <!-- barre de recherche -->
         <div class="input-wrapper">
-            <input type="text" class="input" placeholder="Recherche">
+            <input type="text" class="input" placeholder="Recherche"></input>
         </div>
+
+        <!-- bouton de recherche -->
         <button class="search-button">
             <span class="search-icon"></span>
         </button>
 
-        <span style="margin-left: 100px;"></span> <! --marge gauche -->
+        <!-- marge centre droite -->
+        <span style="margin-left: 10%;"></span>
 
+        <!-- bouton compte -->
+        <button class="button-profile" ><a class="button-profile" href="Header.html">Mon compte</a></button>
 
-        <div class="buttons-wrapper">
-            <button class="button">Mon compte</button>
-        </div>
-
+        <!-- marge droite -->
+        <span style="margin-left: 3%;"></span>
     </div>
 
     <div class="alignement_cote">
         <div class="alignement">
-            <header-button><a class="active" class="header-button"  href="Header.html"target="_blank">Accueil</a></header-button>
+            <header-button><a class="active" class="header-button"  href="Header.html" target="_blank">Accueil</a></header-button>
 
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
+
+            <header-button><a class="header-button" href="http://twitch.com" target="_blank">Tendance communautaire</a></header-button>
 
             <header-button><a class="header-button" href="https://www.twitch.tv/otplol_"target="_blank">Moins de 5 €</a></header-button>
 
@@ -53,9 +62,7 @@
 
             <header-button><a class="header-button" href="http://twitch.com"target="_blank">Moins de 5 min</a></header-button>
 
-            <header-button><a class="header-button" href="http://twitch.com"target="_blank">Au micro-onde</a></header-button>
 
-            <header-button><a class="header-button" href="http://twitch.com"target="_blank">Espace entreprise</a></header-button>
 
             <header-button><a class="header-button" href="http://twitch.com"target="_blank">A propos</a></header-button>
 
@@ -63,6 +70,7 @@
         </div>
     </div>
     <div class="blanc"> </div>
+
 </header>
 
 

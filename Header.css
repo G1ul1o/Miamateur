@@ -12,6 +12,7 @@ header {
     height: 40px;
     border: unset;
 }
+
 .navbutton{
     margin-left: 70px;
     margin-right: 10px;
@@ -27,10 +28,13 @@ header {
     align-items: center;
 }
 
-.title {
+.button-title {
     font-family: "Arial", sans-serif;
     color : #93c47d;
-    margin-left: 70px;
+    margin-left: 15%;
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 30px;
 }
 
 .input-wrapper {
@@ -39,10 +43,10 @@ header {
     border-radius: 50px;
     border: 1px solid rgb(241, 238, 237);
     transition: all 0.4s ease 0s;
-
 }
 
 .input {
+    overflow: hidden;
     display: flex;
     width:100%;
     font-size: 18px;
@@ -50,17 +54,172 @@ header {
     border-radius: 50px;
 }
 
+
+.input input[type="text"] {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+
+.search-form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ddd;
+}
+
+.input.clicked button {
+    width: 100%;
+}
+
+
 .buttons-wrapper {
     display: flex;
     justify-content: flex-end;
+}
 
+
+
+
+.scrolable{
+    display : none;
+    overflow: scroll;
+    width: 80%;
+    left : 60px;
 
 }
 
-.button {
-    margin-right: 10px;
+
+.button-profile {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #93c47d, #76a5af);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
     border: 1px solid rgb(241, 238, 237);
 }
+
+.button-profile:hover {
+    background: linear-gradient(to right, #93c47d, #76a5af);
+}
+
+
+
+
+
+.search-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/116/116836.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.header-button {
+    font-family: "Arial", sans-serif;
+    color : #808080;
+    text-decoration:none;
+    border-width : 10px;
+    width: 2%;
+}
+
+.header-button:hover {
+    transition: all 0.2s ease 0s;
+    color: #93c47d;
+}
+
+.alignement_cote {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    transition: all 0.4s ease 0s;
+}
+.bouton-du-header {
+    width: 100%;
+}
+
+.alignement {
+    width: 90%; /* ajustez la largeur selon vos besoins */
+    margin: auto; /* centre horizontalement */
+    text-align: center; /* centre le contenu de la div */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.active {
+    color : #93c47d;
+    font-family: "Arial", sans-serif;
+    text-decoration:none;
+    border-width : 10px;
+    width: 2%;
+}
+
+.blanc{
+    height: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+}
+
+
+
 
 #li1{;
     float: left;
@@ -100,123 +259,8 @@ nav{
     top : 80px;
 }
 
-.scrolable{
-    display : none;
-    overflow: scroll;
-    width: 80%;
-    left : 60px;
-
-}
-
-
-.button {
-    display: inline-block;
-    padding: 3px 5px;
-    border-radius: 15px;
-    background: linear-gradient(to right, #93c47d, #76a5af);
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background: linear-gradient(to right, #93c47d, #76a5af);
-}
-
-
-
-.search-button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #f2f2f2;
-    border: none;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-    background-color: #ddd;
-}
-
-.search-icon {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/116/116836.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.header-button {
-    font-family: "Arial", sans-serif;
-    color : #808080;
-    text-decoration:none;
-    border-width : 10px;
-    width: 2%;
-
-}
-.alignement_cote {
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-}
-.bouton-du-header {
-    width: 100%;
-
-}
-
-.alignement {
-    width: 90%; /* ajustez la largeur selon vos besoins */
-    margin: auto; /* centre horizontalement */
-    text-align: center; /* centre le contenu de la div */
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.active {
-    color : #93c47d;
-    font-family: "Arial", sans-serif;
-
-    text-decoration:none;
-    border-width : 10px;
-    width: 2%;
-}
-
-.blanc{
-    height: 10px;
-}
 
 
 
 
 
-
-
-
-
-
-input::-webkit-input-placeholder {
-    text-align: center;
-}
-
-input:-moz-placeholder {
-    text-align: center;
-}
-
-input::-moz-placeholder {
-    text-align: center;
-}
-
-input:-ms-input-placeholder {
-    text-align: center;
-}
