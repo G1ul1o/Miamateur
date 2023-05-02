@@ -60,14 +60,17 @@ body {
 .buttons-wrapper {
     display: flex;
     justify-content: flex-end;
+
+
 }
 
-.buttonH{
+.buttonH {
     margin-right: 10px;
     border: 1px solid rgb(241, 238, 237);
 }
 
-.buttonH{
+
+.buttonH {
     display: inline-block;
     padding: 3px 5px;
     border-radius: 15px;
@@ -81,7 +84,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.button:hover {
+.buttonH:hover {
     background: linear-gradient(to right, #93c47d, #76a5af);
 }
 
@@ -199,7 +202,7 @@ input:-ms-input-placeholder {
     align-items: center;
     height: 40vh;
     margin-top: 5%;
- }
+}
 
 .rectangle {
     width: 90%;
@@ -217,7 +220,6 @@ input:-ms-input-placeholder {
     color: white;
     border:none;
 }
-
 
 
 .block{

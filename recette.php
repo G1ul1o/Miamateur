@@ -7,14 +7,20 @@
     $recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
     $ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
     $tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
+    $ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
+    $miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
 
     $recette_result = $conn->query($recette_query);
     $ingredients_result = $conn->query($ingredients_query);
     $tags_result = $conn->query($tags_query);
+    $ustensiles_result = $conn->query($ustensiles_query);
+    $miniature_result = $conn->query($miniature_query);
 
     $recette = $recette_result->fetch();
     $ingredients = $ingredients_result->fetchAll();
     $tags = $tags_result->fetchAll();
+    $ustensiles = $ustensiles_result->fetchAll();
+    $miniature = $miniature_result->fetchAll();
 ?>
 <html lang="en">
 <head>
@@ -42,7 +48,6 @@
                 <span class="search-icon"></span>
             </button>
         </div>
-
         <div>
             <button class="button">Mon compte</button>
         </div>
@@ -71,7 +76,7 @@
             <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
         </div>
         <div class="miniatures">
-            <?php foreach ($recette as $row): ?>
+            <?php foreach ($miniature as $row): ?>
                 <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
             <?php endforeach; ?>
         </div>
@@ -110,11 +115,9 @@
     <h3>Matériel</h3>
     <div class="Ustensiles">
         <ul>
-            <!--
-                <?php //while ($row = $recette->fetch()): ?>
-                    <li><?php //echo $row['nom']; ?></li>
-                <?php //endwhile; ?>
-                -->
+            <?php foreach ($ustensiles as $row): ?>
+                    <li><?php echo $row['nom']; ?></li>
+            <?php endforeach; ?>
         </ul>
     </div>
 </div>
@@ -124,13 +127,17 @@
         <dt>Recette</dt>
         <ul>
             <?php
-            $recipe = json_decode($recette['instructions'], true)[0];
-
-            $steps = $recipe['steps'];
-
-            foreach ($steps as $step) {
-                echo "<li> Step " . $step['number'] . ": ". $step['step'] . "</li>";
+            $instructions = explode(".", $recette["instructions"]);
+            $i = 1;
+            foreach ($instructions as $instruction) {
+                if (empty($instruction)) {
+                    continue;
+                }else{
+                echo "<li>Etape $i : " . trim($instruction) . "</li>";
+                $i++;
+                }
             }
+
             ?>
         </ul>
     </dl>
