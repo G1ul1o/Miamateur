@@ -48,8 +48,8 @@
         <div class="alignement_cote">
             <div class="alignement">
                 <header-button><a class="active header-button" href="Header.html" target="_blank">Accueil</a></header-button>
-                <header-button><a class="header-button" href="https://www.twitch.tv/otplol_" target="_blank">Moins de 5 €</a></header-button>
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Une seule poêle</a></header-button>
+                <header-button><a class="header-button" href="" target="_blank">Moins de 5 €</a></header-button>
+                <header-button><a class="header-button" href="formulaire.php">Ajouter une recette</a></header-button>
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Végétarien</a></header-button>
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Moins de 5 min</a></header-button>
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Au micro-onde</a></header-button>
