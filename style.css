@@ -7,6 +7,8 @@
     width: 50%;
     margin:0 auto 5%; /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
     text-align: center;
+    background-color: #f3f9f9;
+    font-family: Arial, sans-serif;
 }
 
 .alignement div{
@@ -38,16 +40,6 @@
     background-color: #bed08c; /* Couleur rouge */
 }
 
-.button
-{
-    padding: 1% 2%;
-    font-size: 100%;
-    display: inline-block;
-    border-radius: 25px;
-    background-color: #bed08c;
-    color: white;
-    border:none;
-}
 
 .container{
     display: flex;
@@ -82,4 +74,5 @@
     background-color: #bed08c;
     color: white;
     border:none;
+    font-family: Arial, sans-serif;
 }
