@@ -46,6 +46,13 @@ header {
     border-radius: 50px;
 }
 
+.input:hover{
+    border: 10px solid #f2f2f2;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease;
+
+}
+
 /*pour centrer le bouton de recherche au millieu de la barre de recherche*/
 input::-webkit-input-placeholder {
     text-align: center;
