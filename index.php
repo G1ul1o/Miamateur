@@ -22,44 +22,65 @@
     <!--Header-->
     <header id="header">
         <div class="container">
-            <!-- utile pour plus tard quand il faudra faire es fenetre responsive
-            <button class="navbutton" id="navbutton" onclick="changeDisplay()">
-                <img id="image_menu_deroulant" src="images/menu.png" alt="bouton menu déroulant">
-            </button>
-            -->
+            <!-- marge gauche -->
+            <span style="margin-left: 3%;"></span>
+
             <!-- logo -->
-            <img class="img" src="image/image-removebg-preview.jpg" alt="logo" width="80" height="80">
+            <a href="index.php" >
+                <img  src = "image/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
+            </a>
 
             <!-- titre -->
-            <h1 class="title">Miamateur</h1>
+            <a href="index.php" >
+                <h1 class="button-title">Miamateur</h1>
+            </a>
 
-            <div class="input-wrapper">
-                <input type="text" class="input" placeholder="Recherche">
-                <button class="search-button">
-                    <span class="search-icon"></span>
-                </button>
-            </div>
+            <!-- marge centre gauche -->
+            <span style="margin-left: 10%;"></span>
 
-            <div class="buttons-wrapper">
-                <button class="buttonH">Mon compte</button>
-            </div>
+            <!-- barre de recherche -->
+            <form class="input-wrapper">
+                <input type="text" class="input" placeholder="Recherche"></input>
+            </form>
+
+            <!-- bouton de recherche -->
+            <button class="search-button">
+                <span class="search-icon"></span>
+            </button>
+
+            <!-- marge centre droite -->
+            <span style="margin-left: 10%;"></span>
+
+            <!-- bouton compte -->
+            <button class="button-profile" ><a class="button-profile" href="index.php">Mon compte</a></button>
+
+            <!-- marge droite -->
+            <span style="margin-left: 3%;"></span>
         </div>
 
         <div class="alignement_cote">
             <div class="alignement">
-                <header-button><a class="active header-button" href="Header.html" target="_blank">Accueil</a></header-button>
-                <header-button><a class="header-button" href="" target="_blank">Moins de 5 €</a></header-button>
-                <header-button><a class="header-button" href="formulaire.php">Ajouter une recette</a></header-button>
+                <!-- les boutons du header (Acceuil, notre selection...) -->
+                <header-button><a class="active" class="header-button"  href="index.php" target="_blank">Accueil</a></header-button>
+
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
+
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Tendance communautaire</a></header-button>
+
+                <header-button><a class="header-button" href="https://www.twitch.tv/otplol_" target="_blank">Moins de 5 €</a></header-button>
+
+                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Une seule poêle</a></header-button>
+
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Végétarien</a></header-button>
+
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Moins de 5 min</a></header-button>
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Au micro-onde</a></header-button>
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Espace entreprise</a></header-button>
+
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">A propos</a></header-button>
+
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Contact</a></header-button>
             </div>
         </div>
-
-        <div class="blanc"></div>
+        <div class="blanc"> </div>
     </header>
     <body>
         <!--Sélection-->
