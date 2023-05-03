@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="UPDATE HEADER">
-      <change afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="NEW SEARCH FUNCTION">
+      <change afterPath="$PROJECT_DIR$/autocomplete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/recette.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/recette.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,7 @@
       <workItem from="1683020055568" duration="3977000" />
       <workItem from="1683031567203" duration="4318000" />
       <workItem from="1683038264289" duration="1496000" />
-      <workItem from="1683097770598" duration="6146000" />
+      <workItem from="1683097770598" duration="10059000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -99,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683099954330</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="NEW SEARCH FUNCTION">
+      <created>1683107150763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683107150763</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +132,7 @@
     <MESSAGE value="new DB + formulaire files" />
     <MESSAGE value="other files" />
     <MESSAGE value="UPDATE HEADER" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE HEADER" />
+    <MESSAGE value="NEW SEARCH FUNCTION" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEW SEARCH FUNCTION" />
   </component>
 </project>

@@ -52,22 +52,26 @@ header {
 
 #suggestions-container {
     position: absolute;
-    z-index: 1;
-    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
     border: 1px solid #ccc;
-    max-height: 300px;
-    overflow-y: scroll;
-    width: 400px;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 9999;
 }
 
 .suggestion {
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
 }
 
 .suggestion:hover {
     background-color: #f2f2f2;
 }
+
 
 /*pour centrer le bouton de recherche au millieu de la barre de recherche*/
 input::-webkit-input-placeholder {

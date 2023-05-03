@@ -34,6 +34,7 @@ $miniature = $miniature_result->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="recette.css">
 </head>
 <!--Header-->
@@ -56,14 +57,13 @@ $miniature = $miniature_result->fetchAll();
         <span style="margin-left: 10%;"></span>
 
         <!-- barre de recherche -->
-        <form class="input-wrapper">
-            <input type="text" class="input" placeholder="Recherche"></input>
+        <form class="input-wrapper" action="search.php" method="get">
+            <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
+            <button class="search-button" id="searchButton">
+                <span class="search-icon"></span>
+            </button>
+            <div id="suggestions-container"></div>
         </form>
-
-        <!-- bouton de recherche -->
-        <button class="search-button">
-            <span class="search-icon"></span>
-        </button>
 
         <!-- marge centre droite -->
         <span style="margin-left: 10%;"></span>
