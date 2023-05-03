@@ -6,6 +6,7 @@ header {
     box-shadow: 10px 0 20px 0 rgba(0,0,0,0.5);
     width: 100%;
     left : 0;
+    background: white;
 }
 
 
@@ -172,6 +173,26 @@ input:-ms-input-placeholder {
 /*pour ajouter un petit blanc en bas du header*/
 .blanc{
     height: 10px;
+}
+
+.apropos {
+    font-family: "Arial", sans-serif;
+    color : #696969;
+    text-decoration:none;
+}
+
+/*caractéristique du body pour le décaler*/
+body{
+    margin-top: 10% ;
+}
+
+footer{
+    align-items: center;
+    bottom: 0;
+    box-shadow: 10px 0 20px 0 rgba(0,0,0,0.5);
+    width: 100%;
+    left : 0;
+    background: white;
 }
 
 
