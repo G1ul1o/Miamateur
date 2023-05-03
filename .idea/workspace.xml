@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="other files">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="UPDATE HEADER">
+      <change afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/recette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/recette.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <workItem from="1683020055568" duration="3977000" />
       <workItem from="1683031567203" duration="4318000" />
       <workItem from="1683038264289" duration="1496000" />
-      <workItem from="1683097770598" duration="1213000" />
+      <workItem from="1683097770598" duration="6146000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -94,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683039205864</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UPDATE HEADER">
+      <created>1683099954330</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683099954330</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +120,7 @@
     <MESSAGE value="add all files" />
     <MESSAGE value="new DB + formulaire files" />
     <MESSAGE value="other files" />
-    <option name="LAST_COMMIT_MESSAGE" value="other files" />
+    <MESSAGE value="UPDATE HEADER" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE HEADER" />
   </component>
 </project>

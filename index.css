@@ -9,6 +9,7 @@ header {
     width: 100%;
     left : 0;
     background: white;
+    z-index: 999;
 }
 
 
@@ -49,11 +50,24 @@ header {
     border-radius: 50px;
 }
 
+#suggestions-container {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: scroll;
+    width: 400px;
+}
 
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
 
-
-
-
+.suggestion:hover {
+    background-color: #f2f2f2;
+}
 
 /*pour centrer le bouton de recherche au millieu de la barre de recherche*/
 input::-webkit-input-placeholder {
@@ -261,6 +275,7 @@ input:-ms-input-placeholder {
     height: 100%;
     width: 100%;
     margin-bottom: 5%;
+    object-fit: cover;
 }
 
 .alignement {
