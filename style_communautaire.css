@@ -14,7 +14,7 @@ header {
 
 
 /*sert a placer des choses dedans*/
-.conteneur {
+.conteneure {
     display: flex;
     justify-content: space-between;
     align-items: center;
