@@ -7,7 +7,7 @@ include 'connection.php';
     <meta charset="UTF-8">
     <title>Formulaire</title>
     <link rel="stylesheet" href="formulaire.css">
-    <script src="formulaire.js"></script>
+    <script src="JS/formulaire.js"></script>
 </head>
 <body>
 <h1>Ajouter une recette</h1>

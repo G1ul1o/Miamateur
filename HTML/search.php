@@ -1,34 +1,45 @@
 <?php
-    include 'connection.php';
+include '../PHP/connection.php';
 
-    // Récupération de l'id de la recette depuis l'URL
-    $id_recette = $_GET['id'];
+// Récupération de la chaîne de recherche entrée par l'utilisateur
+$search = $_GET['search'];
+$id_recette_query = "SELECT id FROM `recettes` WHERE nom LIKE '$search'";
+$id_recette_result = $conn->query($id_recette_query);
+$id_recette_row = $id_recette_result->fetch();
+$id_recette = $id_recette_row['id'];
 
-    $recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
-    $ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
-    $tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
-    $ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
-    $miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
+// Requête SQL pour récupérer les recettes correspondantes à la recherche
 
-    $recette_result = $conn->query($recette_query);
-    $ingredients_result = $conn->query($ingredients_query);
-    $tags_result = $conn->query($tags_query);
-    $ustensiles_result = $conn->query($ustensiles_query);
-    $miniature_result = $conn->query($miniature_query);
+$recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
+$ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
+$tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
+$ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
+$miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
 
-    $recette = $recette_result->fetch();
-    $ingredients = $ingredients_result->fetchAll();
-    $tags = $tags_result->fetchAll();
-    $ustensiles = $ustensiles_result->fetchAll();
-    $miniature = $miniature_result->fetchAll();
+$recette_result = $conn->query($recette_query);
+$ingredients_result = $conn->query($ingredients_query);
+$tags_result = $conn->query($tags_query);
+$ustensiles_result = $conn->query($ustensiles_query);
+$miniature_result = $conn->query($miniature_query);
+
+$recette = $recette_result->fetch();
+$ingredients = $ingredients_result->fetchAll();
+$tags = $tags_result->fetchAll();
+$ustensiles = $ustensiles_result->fetchAll();
+$miniature = $miniature_result->fetchAll();
+
+
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="recette.css">
+    <script src="../JS/index.js" defer></script>
+    <link rel="stylesheet" href="../CSS/recette.css">
+    <link rel="stylesheet" href="../CSS/HEADER.css">
+    <link rel="stylesheet" href="../CSS/FOOTER.css">
 </head>
+<body>
 <!--Header-->
 <header id="header">
     <div class="container">
@@ -37,7 +48,7 @@
 
         <!-- logo -->
         <a href="index.php" >
-            <img  src = "image/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
+            <img src = "../image/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
         </a>
 
         <!-- titre -->
@@ -70,7 +81,7 @@
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <header-button><a class="active" class="header-button"  href="index.php" target="_blank">Accueil</a></header-button>
+            <header-button><a class="active" class="header-button" href="index.php" target="_blank">Accueil</a></header-button>
 
             <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
 
@@ -91,7 +102,7 @@
     </div>
     <div class="blanc"> </div>
 </header>
-<body>
+<main>
 <div class="introduction">
     <div class="presentation">
         <div class="photo">
@@ -138,7 +149,7 @@
     <div class="Ustensiles">
         <ul>
             <?php foreach ($ustensiles as $row): ?>
-                    <li><?php echo $row['nom']; ?></li>
+                <li><?php echo $row['nom']; ?></li>
             <?php endforeach; ?>
         </ul>
     </div>
@@ -155,8 +166,8 @@
                 if (empty($instruction)) {
                     continue;
                 }else{
-                echo "<li>Etape $i : " . trim($instruction) . "</li>";
-                $i++;
+                    echo "<li>Etape $i : " . trim($instruction) . "</li>";
+                    $i++;
                 }
             }
 
@@ -164,5 +175,6 @@
         </ul>
     </dl>
 </div>
+</main>
 </body>
 </html>

@@ -10,11 +10,12 @@ header {
     left : 0;
     background: white;
     z-index: 999;
+    padding: 10px 0;
 }
 
 
 /*sert a placer des choses dedans*/
-.container {
+.Header-Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,20 +125,9 @@ input:-ms-input-placeholder {
     width: 100%;
 }
 
-
-/*jsp a quoi ça sert mais quand je l'enlève ça fait un truc bizarre. Ça a un liens avec l'ancien bouton de navigation*/
-.scrolable{
-    display : none;
-    overflow: scroll;
-    width: 80%;
-    left : 60px;
-
-}
-
 /*bouton profile*/
 .button-profile {
     display: inline-block;
-    padding: 3px 5px;
     border-radius: 15px;
     background: linear-gradient(to right, #93c47d, #76a5af);
     color: #fff;
@@ -148,8 +138,6 @@ input:-ms-input-placeholder {
     transition: all 0.3s ease;
     border: 1px solid rgb(241, 238, 237);
 }
-
-
 
 /*les boutons du header (Acceuil, tendance commmunautaires...)*/
 .header-button {
@@ -189,110 +177,11 @@ input:-ms-input-placeholder {
     border-width : 10px;
     width: 2%;
 }
-
-/*pour ajouter un petit blanc en bas du header*/
-.blanc{
-    height: 10px;
-}
-body {
-    margin-top: 150px; /* Ajuster la valeur en fonction de la hauteur du header */
+.logo{
+    width : 80px;
+    height : 80px;
 }
 
-/*
-    BODY
- */
-
-input::-webkit-input-placeholder {
-    text-align: center;
-}
-
-input:-moz-placeholder {
-    text-align: center;
-}
-
-input::-moz-placeholder {
-    text-align: center;
-}
-
-input:-ms-input-placeholder {
-    text-align: center;
-}
-.section h2{
-    border: 5px solid;
-    border-color: #bed08c;
-    border-radius: 25px;
-    padding:1%;
-    width: 50%;
-    margin:0 auto 5%; /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
-    text-align: center;
-}
-
-.alignement div{
-    margin-right: 5%;
-    margin-left: 5%;
-}
-.alignement{
-    display: flex;
-    justify-content: space-between;
-}
-
-.picture {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-}
-
-.conteneur {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    margin-top: 5%;
-}
-
-.rectangle {
-    width: 90%;
-    height: 60%;
-    background-color: #bed08c; /* Couleur rouge */
-}
-
-.button
-{
-    padding: 1% 2%;
-    font-size: 100%;
-    display: inline-block;
-    border-radius: 25px;
-    background-color: #bed08c;
-    color: white;
-    border:none;
-}
-
-
-.block{
-    flex-basis: 33.33%;
-    justify-content: center;
-    position: relative;
-}
-
-.block img{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 5%;
-    object-fit: cover;
-}
-
-.alignement {
-    text-align: center;
-}
-
-.block button {
-    position: absolute;
-    font-size: 100%;
-    left:50%;
-    transform : translateX(-50%);
-    border-radius: 25px;
-    background-color: #bed08c;
-    color: white;
-    border:none;
+main{
+    margin-top: 150px;
 }

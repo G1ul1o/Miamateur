@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="NEW SEARCH FUNCTION">
-      <change afterPath="$PROJECT_DIR$/autocomplete.php" afterDir="false" />
+    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="SEARCH BAR ON">
+      <change afterPath="$PROJECT_DIR$/CSS/FOOTER.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS/HEADER.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/recette.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/recette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/recette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autocomplete.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/autocomplete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fill.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/formulaire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/recette.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +71,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\miamateur\PHP" />
+      <recent name="C:\wamp64\www\miamateur\HTML" />
+      <recent name="C:\wamp64\www\miamateur\CSS" />
+      <recent name="C:\wamp64\www\miamateur\JS" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +90,9 @@
       <workItem from="1683020055568" duration="3977000" />
       <workItem from="1683031567203" duration="4318000" />
       <workItem from="1683038264289" duration="1496000" />
-      <workItem from="1683097770598" duration="10059000" />
+      <workItem from="1683097770598" duration="10997000" />
+      <workItem from="1684418401944" duration="425000" />
+      <workItem from="1684766104919" duration="3746000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -110,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683107150763</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SEARCH BAR ON">
+      <created>1683120005747</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683120005747</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +159,7 @@
     <MESSAGE value="other files" />
     <MESSAGE value="UPDATE HEADER" />
     <MESSAGE value="NEW SEARCH FUNCTION" />
-    <option name="LAST_COMMIT_MESSAGE" value="NEW SEARCH FUNCTION" />
+    <MESSAGE value="SEARCH BAR ON" />
+    <option name="LAST_COMMIT_MESSAGE" value="SEARCH BAR ON" />
   </component>
 </project>

@@ -1,0 +1,177 @@
+
+/*
+    BODY
+ */
+
+
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+}
+
+.introduction {
+    position: static;
+    display: inline-block;
+}
+.presentation {
+    width: 35%;
+    height: 35%;
+    display: inline-block;
+    margin :2%;
+}
+
+.allimg {
+    width: 100%;
+    object-fit: fill;
+    margin-bottom:5%;
+
+}
+
+
+.img2 {
+    display: flex;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+}
+.miniatures
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap:5%;
+}
+
+.paragraphe{
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+}
+.titre {
+    font-size: 140%;
+    color : #bed08c;
+    /* Ajout de la largeur de 20% */
+}
+
+.p1 {
+    display: flex;
+    gap: 25%;
+    font-style: normal;
+    font-size: 150%;
+}
+.para
+{
+    display: inline-block;
+    color: #bed08c;
+}
+
+.parametre h2 {
+    font-weight: normal;
+    font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
+    border: 3px solid #bed08c;
+    border-radius: 25px;
+    padding:1%;
+    margin:0% /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
+}
+
+
+.description
+{
+    display: inline-block;
+    font-size:140%;
+    margin-bottom: 5%;
+}
+
+.élément{
+    width: 25%;
+    position: static;
+    margin-left:2%;
+    display: inline-block;
+}
+.élément h3
+{
+    font-weight: normal;
+    font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
+    border: 3px solid #bed08c;
+    border-radius: 25px;
+    padding:1%;
+    margin:0% /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
+}
+.ingrédients
+ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding-left: 0; /* Supprime le padding à gauche pour les listes */
+    font-size: 120%;
+}
+
+.ingrédients
+li::before {
+    content: "-"; /* Ajoute un tiret devant chaque élément */
+    font-weight: bold; /* Met en gras le tiret */
+    margin-right: 0.5em; /* Ajoute une marge à droite du tiret */
+}
+
+.Ustensiles
+ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+    padding-left: 0; /* Supprime le padding à gauche pour les listes */
+    font-size: 120%;
+}
+.Ustensiles
+li::before {
+    content: "- "; /* Ajoute un tiret devant chaque élément */
+    font-weight: bold; /* Met en gras le tiret */
+    margin-right: 0.5em; /* Ajoute une marge à droite du tiret */
+}
+
+
+.Recette dl {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left:2%;
+    width: 90%;
+    background-color: #F4F6EDFF;
+}
+.Recette dt {
+    font-size:200%;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.Recette ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: 0.5%;
+}
+
+.Recette li {
+    list-style-type: none;
+    margin-top: 0.5em;
+    margin-left: 0.5%;
+}
+
+.Recette h3 {
+    margin-top: 0;
+    margin-left: 0.5%;
+    font-style: normal;
+    font-size: 120%;
+}
+
+.Recette p {
+    margin-top: 0;
+    margin-left: 0.5%;
+    font-style: normal;
+    font-size: 110%;
+}
