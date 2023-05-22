@@ -1,3 +1,4 @@
+/*Body*/
 .box
 {
     display: flex;
@@ -15,7 +16,11 @@
     width: 100%;
     margin-bottom: 5%;
 }
-
+.section h1
+{
+    text-align: center;
+    align-items: center;
+}
 .section h2
 {
     border: 5px solid;
@@ -38,7 +43,7 @@
 
 .rectangle {
     display: flex;
-    width: 80%;
+    width: 65%;
     height: 60%;
     background-color: #f3f9f9; /* Couleur */
     align-items: center; /* centré le texte horizontalement*/
@@ -54,6 +59,7 @@
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .conteneur-recherche form {
@@ -61,6 +67,8 @@
     justify-content: center;
     align-items: center;
     gap: 2%;
+    width: 70%;
+    height: 100%;
 
 }
 
@@ -74,6 +82,7 @@
     border:none;
     border-radius: 20px;
     font-family: Arial, sans-serif;
+    font-size: 100%;
 }
 
 .conteneur-recherche input[type=submit]
@@ -83,7 +92,56 @@
     border-radius: 25px;
     background-color: #bed08c;
     color: white;
-    width: 50%;
+    width: 20%;
     font-size: 100%;
     font-family: Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.block{
+    flex-basis: 33.33%;
+    justify-content: center;
+    position: relative;
+}
+
+.block img{
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 5%;
+}
+
+
+.block button {
+    position: absolute;
+    font-size: 100%;
+    left:50%;
+    transform : translateX(-50%);
+    border-radius: 25px;
+    background-color: #bed08c;
+    color: white;
+    border:none;
+    font-family: Arial, sans-serif;
+}
+
+.block h1
+{
+    width:1%;
+    font-family: "Arial", sans-serif;
+}
+
+.block p
+{
+    width: 1%;
+    font-family: "Arial", sans-serif;
 }
