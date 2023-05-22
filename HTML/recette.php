@@ -38,12 +38,12 @@
             <span style="margin-left: 3%;"></span>
 
             <!-- logo -->
-            <a href="index.php" >
+            <a href="../index.php" >
                 <img src = "../image/image-removebg-preview.jpg" class    ="logo">
             </a>
 
             <!-- titre -->
-            <a href="index.php" >
+            <a href="../index.php" >
                 <h1 class="button-title">Miamateur</h1>
             </a>
 
@@ -59,13 +59,13 @@
                 <div id="suggestions-container"></div>
             </form>
             <!-- bouton compte -->
-            <button class="button-profile" ><a class="button-profile" href="index.php">Mon compte</a></button>
+            <button class="button-profile" ><a class="button-profile" href="../index.php">Mon compte</a></button>
         </div>
 
         <div class="alignement_cote">
             <div class="alignement">
                 <!-- les boutons du header (Acceuil, notre selection...) -->
-                <header-button><a class="active" class="header-button" href="index.php" target="_blank">Accueil</a></header-button>
+                <header-button><a class="active" class="header-button" href="../index.php" target="_blank">Accueil</a></header-button>
 
                 <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
 

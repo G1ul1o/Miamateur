@@ -35,5 +35,4 @@ document.addEventListener('click', (event) => {
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', () => {
     const searchString = searchBar.value;
-    // Effectuer la recherche ici en utilisant la valeur de searchString
 });

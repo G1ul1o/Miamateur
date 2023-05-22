@@ -42,17 +42,17 @@ $miniature = $miniature_result->fetchAll();
 <body>
 <!--Header-->
 <header id="header">
-    <div class="container">
+    <div class="Header-Container">
         <!-- marge gauche -->
         <span style="margin-left: 3%;"></span>
 
         <!-- logo -->
-        <a href="index.php" >
-            <img src = "../image/image-removebg-preview.jpg" alt="logo" width = "80px" height = "80px"></img>
+        <a href="../index.php" >
+            <img src = "../image/image-removebg-preview.jpg" class    ="logo">
         </a>
 
         <!-- titre -->
-        <a href="index.php" >
+        <a href="../index.php" >
             <h1 class="button-title">Miamateur</h1>
         </a>
 
@@ -67,21 +67,14 @@ $miniature = $miniature_result->fetchAll();
             </button>
             <div id="suggestions-container"></div>
         </form>
-
-        <!-- marge centre droite -->
-        <span style="margin-left: 10%;"></span>
-
         <!-- bouton compte -->
-        <button class="button-profile" ><a class="button-profile" href="index.php">Mon compte</a></button>
-
-        <!-- marge droite -->
-        <span style="margin-left: 3%;"></span>
+        <button class="button-profile" ><a class="button-profile" href="../index.php">Mon compte</a></button>
     </div>
 
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <header-button><a class="active" class="header-button" href="index.php" target="_blank">Accueil</a></header-button>
+            <header-button><a class="active" class="header-button" href="../index.php" target="_blank">Accueil</a></header-button>
 
             <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
 
@@ -100,7 +93,6 @@ $miniature = $miniature_result->fetchAll();
             <header-button><a class="header-button" href="http://twitch.com" target="_blank">Contact</a></header-button>
         </div>
     </div>
-    <div class="blanc"> </div>
 </header>
 <main>
 <div class="introduction">
