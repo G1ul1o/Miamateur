@@ -6,8 +6,8 @@ include 'connection.php';
 <head>
     <meta charset="UTF-8">
     <title>Formulaire</title>
-    <link rel="stylesheet" href="formulaire.css">
-    <script src="JS/formulaire.js"></script>
+    <link rel="stylesheet" href="../CSS/formulaire.css">
+    <script src="../JS/formulaire.js"></script>
 </head>
 <body>
 <h1>Ajouter une recette</h1>
