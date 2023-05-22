@@ -22,7 +22,7 @@ searchBar.addEventListener('input', () => {
             });
         }
     };
-    xhr.open('GET', 'autocomplete.php?q=' + searchString, true);
+    xhr.open('GET', 'PHP/autocomplete.php?q=' + searchString, true);
     xhr.send();
 });
 
