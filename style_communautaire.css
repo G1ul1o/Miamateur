@@ -246,7 +246,7 @@ body {
     display: flex;
     width: 65%;
     height: 60%;
-    background-color: #f3f9f9; /* Couleur */
+    background-color: #edf6e5; /* Couleur */
     align-items: center; /* centré le texte horizontalement*/
     justify-content: center; /*centré le texte verticalement*/
     margin: auto;
