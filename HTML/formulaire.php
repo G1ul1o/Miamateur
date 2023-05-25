@@ -10,6 +10,52 @@ include 'connection.php';
     <script src="../JS/formulaire.js"></script>
 </head>
 <body>
+<header id="header">
+    <div class="Header-Container">
+        <!-- marge gauche -->
+        <span style="margin-left: 3%;"></span>
+
+        <!-- logo -->
+        <a href="../index.php" >
+            <img src = "../image/image-removebg-preview.jpg" class="logo">
+        </a>
+
+        <!-- titre -->
+        <a href="../index.php" >
+            <h1 class="button-title">Miamateur</h1>
+        </a>
+
+        <!-- marge centre gauche -->
+        <span style="margin-left: 10%;"></span>
+
+        <!-- barre de recherche -->
+        <form class="input-wrapper" action="search.php" method="get">
+            <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
+            <button class="search-button" id="searchButton">
+                <span class="search-icon"></span>
+            </button>
+            <div id="suggestions-container"></div>
+        </form>
+        <!-- bouton compte -->
+        <a class="button-profile" href="../index.php">Mon compte</a>
+    </div>
+
+    <div class="alignement_cote">
+        <div class="alignement">
+            <!-- les boutons du header (Acceuil, notre selection...) -->
+            <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
+
+            <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
+
+            <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
+
+            <a class="header-button" href="../index.php" target="_blank">A propos</a>
+
+            <a class="header-button" href="../index.php" target="_blank">Contact</a>
+        </div>
+    </div>
+</header>
+
 <h1>Ajouter une recette</h1>
 
 <form method="POST" action="traitement.php" enctype="multipart/form-data">

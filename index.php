@@ -48,29 +48,21 @@
                 <div id="suggestions-container"></div>
             </form>
             <!-- bouton compte -->
-            <button class="button-profile" ><a class="button-profile" href="index.php">Mon compte</a></button>
+            <a class="button-profile" href="index.php">Mon compte</a>
         </div>
 
         <div class="alignement_cote">
             <div class="alignement">
                 <!-- les boutons du header (Acceuil, notre selection...) -->
-                <header-button><a class="active" class="header-button" href="index.php" target="_blank">Accueil</a></header-button>
+                <a class="active header-button" href="index.php" target="_blank">Accueil</a>
 
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Notre selection</a></header-button>
+                <a class="header-button" href="index.php" target="_blank">Notre selection</a>
 
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Tendance communautaire</a></header-button>
+                <a class="header-button" href="index.php" target="_blank">Tendance communautaire</a>
 
-                <header-button><a class="header-button" href="https://www.twitch.tv/otplol_" target="_blank">Moins de 5 €</a></header-button>
+                <a class="header-button" href="index.php" target="_blank">A propos</a>
 
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Une seule poêle</a></header-button>
-
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Végétarien</a></header-button>
-
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Moins de 5 min</a></header-button>
-
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">A propos</a></header-button>
-
-                <header-button><a class="header-button" href="http://twitch.com" target="_blank">Contact</a></header-button>
+                <a class="header-button" href="index.php" target="_blank">Contact</a>
             </div>
         </div>
     </header>
