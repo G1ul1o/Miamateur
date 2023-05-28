@@ -111,7 +111,6 @@
             <?php
             ?>
     </main>
-    </body>
     <footer>
         <div id="lefooter">
             <ul id="boutons-cliquables">
@@ -141,4 +140,5 @@
             </ul>
         </div>
     </footer>
+    </body>
 </html>
