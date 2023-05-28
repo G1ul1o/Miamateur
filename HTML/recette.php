@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
     <script src="../JS/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../CSS/recette.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
@@ -151,5 +152,34 @@
             </dl>
         </div>
     </main>
+    <footer class="show-footer">
+        <div id="lefooter">
+            <ul id="boutons-cliquables">
+                <li><a href="#" class="lien_footer">Accueil</a></li>
+                <li><a href="#" class="lien_footer">À propos</a></li>
+                <li><a href="#" class="lien_footer">Contact</a></li>
+            </ul>
+            <br>
+            <h2>Nos Réseaux</h2>
+            <ul id="social_media">
+                <div class="items_social">
+                    <li><img  src = "image/Instagram-logo.png" alt="insta" ></li>
+                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "image/facebook-logo.png" alt="facebook"> </li>
+                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img src = "image/pinterest-logo.png" alt="pinterest"> </li>
+                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "image/twitter-logo.png" alt="twitter" > </li>
+                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+                </div>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

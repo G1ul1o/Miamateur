@@ -35,130 +35,160 @@ $miniature = $miniature_result->fetchAll();
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
     <script src="../JS/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../CSS/recette.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
 </head>
 <body>
 <!--Header-->
-<header id="header">
-    <div class="Header-Container">
-        <!-- marge gauche -->
-        <span style="margin-left: 3%;"></span>
+    <header id="header">
+        <div class="Header-Container">
+            <!-- marge gauche -->
+            <span style="margin-left: 3%;"></span>
 
-        <!-- logo -->
-        <a href="../index.php" >
-            <img src = "../image/image-removebg-preview.jpg" class="logo">
-        </a>
+            <!-- logo -->
+            <a href="../index.php" >
+                <img src = "../image/image-removebg-preview.jpg" class="logo">
+            </a>
 
-        <!-- titre -->
-        <a href="../index.php" >
-            <h1 class="button-title">Miamateur</h1>
-        </a>
+            <!-- titre -->
+            <a href="../index.php" >
+                <h1 class="button-title">Miamateur</h1>
+            </a>
 
-        <!-- marge centre gauche -->
-        <span style="margin-left: 10%;"></span>
+            <!-- marge centre gauche -->
+            <span style="margin-left: 10%;"></span>
 
-        <!-- barre de recherche -->
-        <form class="input-wrapper" action="search.php" method="get">
-            <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
-            <button class="search-button" id="searchButton">
-                <span class="search-icon"></span>
-            </button>
-            <div id="suggestions-container"></div>
-        </form>
-        <!-- bouton compte -->
-        <a class="button-profile" href="../index.php">Mon compte</a>
-    </div>
-
-    <div class="alignement_cote">
-        <div class="alignement">
-            <!-- les boutons du header (Acceuil, notre selection...) -->
-            <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
-
-            <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
-
-            <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
-
-            <a class="header-button" href="../index.php" target="_blank">A propos</a>
-
-            <a class="header-button" href="../index.php" target="_blank">Contact</a>
+            <!-- barre de recherche -->
+            <form class="input-wrapper" action="search.php" method="get">
+                <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
+                <button class="search-button" id="searchButton">
+                    <span class="search-icon"></span>
+                </button>
+                <div id="suggestions-container"></div>
+            </form>
+            <!-- bouton compte -->
+            <a class="button-profile" href="../index.php">Mon compte</a>
         </div>
-    </div>
-</header>
-<main>
-<div class="introduction">
-    <div class="presentation">
-        <div class="photo">
-            <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
+
+        <div class="alignement_cote">
+            <div class="alignement">
+                <!-- les boutons du header (Acceuil, notre selection...) -->
+                <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
+
+                <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
+
+                <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
+
+                <a class="header-button" href="../index.php" target="_blank">A propos</a>
+
+                <a class="header-button" href="../index.php" target="_blank">Contact</a>
+            </div>
         </div>
-        <div class="miniatures">
-            <?php foreach ($miniature as $row): ?>
-                <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
-            <?php endforeach; ?>
+    </header>
+    <main>
+    <div class="introduction">
+        <div class="presentation">
+            <div class="photo">
+                <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
+            </div>
+            <div class="miniatures">
+                <?php foreach ($miniature as $row): ?>
+                    <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
-    <div class="paragraphe">
-        <div class="titre">
-            <h1><?php echo $recette['nom']; ?></h1>
-        </div>
-        <div class="p1">
-            <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
-            <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
-        </div>
-        <div class="tag">
-            <?php foreach ($tags as $row): ?>
-                <span class="tag">#<?php echo $row['nom']; ?></span>
-            <?php endforeach; ?>
-        </div>
-        <div class="parametre">
-            <h2>Description</h2>
-            <div class="description">
-                <p><?php echo $recette['description']; ?></p>
+        <div class="paragraphe">
+            <div class="titre">
+                <h1><?php echo $recette['nom']; ?></h1>
+            </div>
+            <div class="p1">
+                <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
+                <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
+            </div>
+            <div class="tag">
+                <?php foreach ($tags as $row): ?>
+                    <span class="tag">#<?php echo $row['nom']; ?></span>
+                <?php endforeach; ?>
+            </div>
+            <div class="parametre">
+                <h2>Description</h2>
+                <div class="description">
+                    <p><?php echo $recette['description']; ?></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="élément">
-    <h3>Ingrédients</h3>
-    <div class="ingrédients">
-        <ul>
-            <?php foreach ($ingredients as $row): ?>
-                <li><?php echo $row['quantite'] . ' ' . $row['nom']; ?></li>
-            <?php endforeach; ?>
-        </ul>
+    <div class="élément">
+        <h3>Ingrédients</h3>
+        <div class="ingrédients">
+            <ul>
+                <?php foreach ($ingredients as $row): ?>
+                    <li><?php echo $row['quantite'] . ' ' . $row['nom']; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <h3>Matériel</h3>
+        <div class="Ustensiles">
+            <ul>
+                <?php foreach ($ustensiles as $row): ?>
+                    <li><?php echo $row['nom']; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     </div>
-    <h3>Matériel</h3>
-    <div class="Ustensiles">
-        <ul>
-            <?php foreach ($ustensiles as $row): ?>
-                <li><?php echo $row['nom']; ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</div>
 
-<div class="Recette">
-    <dl>
-        <dt>Recette</dt>
-        <ul>
-            <?php
-            $instructions = explode(".", $recette["instructions"]);
-            $i = 1;
-            foreach ($instructions as $instruction) {
-                if (empty($instruction)) {
-                    continue;
-                }else{
-                    echo "<li>Etape $i : " . trim($instruction) . "</li>";
-                    $i++;
+    <div class="Recette">
+        <dl>
+            <dt>Recette</dt>
+            <ul>
+                <?php
+                $instructions = explode(".", $recette["instructions"]);
+                $i = 1;
+                foreach ($instructions as $instruction) {
+                    if (empty($instruction)) {
+                        continue;
+                    }else{
+                        echo "<li>Etape $i : " . trim($instruction) . "</li>";
+                        $i++;
+                    }
                 }
-            }
 
-            ?>
-        </ul>
-    </dl>
-</div>
-</main>
+                ?>
+            </ul>
+        </dl>
+    </div>
+    </main>
+    <footer class="show-footer">
+        <div id="lefooter">
+            <ul id="boutons-cliquables">
+                <li><a href="#" class="lien_footer">Accueil</a></li>
+                <li><a href="#" class="lien_footer">À propos</a></li>
+                <li><a href="#" class="lien_footer">Contact</a></li>
+            </ul>
+            <br>
+            <h2>Nos Réseaux</h2>
+            <ul id="social_media">
+                <div class="items_social">
+                    <li><img  src = "image/Instagram-logo.png" alt="insta" ></li>
+                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "image/facebook-logo.png" alt="facebook"> </li>
+                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img src = "image/pinterest-logo.png" alt="pinterest"> </li>
+                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "image/twitter-logo.png" alt="twitter" > </li>
+                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+                </div>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

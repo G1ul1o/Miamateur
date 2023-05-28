@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="CSS/HEADER.css">
         <link rel="stylesheet" href="CSS/FOOTER.css">
         <script src="JS/index.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <meta charset="utf-8">
         <title>Miamateur</title>
     </head>
@@ -111,7 +112,7 @@
             <?php
             ?>
     </main>
-    <footer>
+    <footer class="show-footer">
         <div id="lefooter">
             <ul id="boutons-cliquables">
                 <li><a href="#" class="lien_footer">Accueil</a></li>
@@ -122,19 +123,19 @@
             <h2>Nos Réseaux</h2>
             <ul id="social_media">
                 <div class="items_social">
-                    <li><img  src = "images/Instagram_icon.png.webp" alt="insta" ></li>
+                    <li><img  src = "image/Instagram-logo.png" alt="insta" ></li>
                     <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img  src = "images/Facebook_f_logo_(2019).svg.png" alt="facebook"> </li>
+                    <li><img  src = "image/facebook-logo.png" alt="facebook"> </li>
                     <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img src = "images/580b57fcd9996e24bc43c52e.png" alt="pinterest"> </li>
+                    <li><img src = "image/pinterest-logo.png" alt="pinterest"> </li>
                     <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img  src = "images/logo-rond-twitter.png" alt="twitter" > </li>
+                    <li><img  src = "image/twitter-logo.png" alt="twitter" > </li>
                     <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
                 </div>
             </ul>

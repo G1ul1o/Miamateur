@@ -36,3 +36,15 @@ const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', () => {
     const searchString = searchBar.value;
 });
+
+
+// Attendre que le contenu de la page soit chargé
+$(window).scroll(function() {
+    var scrollHeight = $(document).height();
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+        $('footer').addClass('show');
+    } else {
+        $('footer').removeClass('show');
+    }
+});
