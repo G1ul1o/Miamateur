@@ -112,4 +112,33 @@
             ?>
     </main>
     </body>
+    <footer>
+        <div id="lefooter">
+            <ul id="boutons-cliquables">
+                <li><a href="#" class="lien_footer">Accueil</a></li>
+                <li><a href="#" class="lien_footer">À propos</a></li>
+                <li><a href="#" class="lien_footer">Contact</a></li>
+            </ul>
+            <br>
+            <h2>Nos Réseaux</h2>
+            <ul id="social_media">
+                <div class="items_social">
+                    <li><img  src = "images/Instagram_icon.png.webp" alt="insta" ></li>
+                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "images/Facebook_f_logo_(2019).svg.png" alt="facebook"> </li>
+                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img src = "images/580b57fcd9996e24bc43c52e.png" alt="pinterest"> </li>
+                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "images/logo-rond-twitter.png" alt="twitter" > </li>
+                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+                </div>
+            </ul>
+        </div>
+    </footer>
 </html>
