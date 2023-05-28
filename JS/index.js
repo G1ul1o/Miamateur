@@ -22,7 +22,7 @@ searchBar.addEventListener('input', () => {
             });
         }
     };
-    xhr.open('GET', 'PHP/autocomplete.php?q=' + searchString, true);
+    xhr.open('GET', '../PHP/autocomplete.php?q=' + searchString, true);
     xhr.send();
 });
 
@@ -39,12 +39,19 @@ searchButton.addEventListener('click', () => {
 
 
 // Attendre que le contenu de la page soit chargé
-$(window).scroll(function() {
-    var scrollHeight = $(document).height();
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-        $('footer').addClass('show');
+window.addEventListener("scroll", function() {
+    var footer = document.querySelector("footer");
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var bodyHeight = document.body.offsetHeight;
+
+    if (scrollPosition + windowHeight >= bodyHeight) {
+        footer.style.opacity = "1";
+        footer.style.visibility = "visible";
     } else {
-        $('footer').removeClass('show');
+        footer.style.opacity = "0";
+        footer.style.visibility = "hidden";
     }
 });
+
+

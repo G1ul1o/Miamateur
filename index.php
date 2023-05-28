@@ -77,7 +77,7 @@
             <div class="alignement">
                 <?php while ($row = $result_selection->fetch()): ?>
                     <div class="block">
-                        <img class="picture" src="<?php echo $row['image_url']; ?>" alt="<?php echo $row['nom']; ?>" onclick="">
+                        <img class="picture" src="<?php echo $row['image_url']; ?>" alt="<?php echo $row['nom']; ?>" onclick="window.location.href='HTML/recette.php?id=<?php echo $row['id']; ?>'">
                         <form action="HTML/recette.php" method="GET">
                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                             <button class="button" type="submit"><?php echo $row['nom']; ?></button>
@@ -100,7 +100,7 @@
                 <div class="alignement">
                     <?php while ($row = $result_tendances->fetch()): ?>
                         <div class="block">
-                            <img class="picture" src="<?php echo $row['image_url']; ?>" alt="<?php echo $row['nom']; ?>">
+                            <img class="picture" src="<?php echo $row['image_url']; ?>" alt="<?php echo $row['nom']; ?>" onclick="window.location.href='HTML/recette.php?id=<?php echo $row['id']; ?>'">
                             <form action="HTML/recette.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                 <button class="button" type="submit"><?php echo $row['nom']; ?></button>
