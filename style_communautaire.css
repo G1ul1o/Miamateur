@@ -306,6 +306,7 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
+    height: 400px
 }
 
 .block{
@@ -314,7 +315,7 @@ body {
     position: relative;
 }
 
-.block img{
+img{
     display: flex;
     height: 100%;
     max-width: 100%;
@@ -346,3 +347,24 @@ body {
     width: 1%;
     font-family: "Arial", sans-serif;
 }
+
+.container ul
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    padding: 0;
+    list-style: none;
+}
+
+.container li
+{
+    flex-basis: 50%;
+    justify-content: center;
+    position: relative;
+}
+
