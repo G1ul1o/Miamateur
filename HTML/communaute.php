@@ -58,7 +58,7 @@
     </header>
     <main>
         <div class="box">
-            <img src="friends-happiness-enjoying-dinning-eating-concept.jpeg">
+            <img src="../image/comu-img.jpeg">
         </div>
         <div class = "section">
             <h2>Recettes de la communauté</h2>
