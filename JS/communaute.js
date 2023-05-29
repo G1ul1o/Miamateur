@@ -1,70 +1,80 @@
 window.onload = function() {
     var page = document.getElementById("container");
 
-    var nbre_recette = 14; /*requete serveur*/
+    // Faire une requête AJAX pour récupérer les données des recettes depuis le serveur
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        console.log(this.responseText);
+        if (this.readyState === 4 && this.status === 200) {
+            var recettes = JSON.parse(this.responseText);
 
-    var indice = 0;
+            var nbre_recette = recettes.length;
 
-    for (var i = 0; i < nbre_recette; i++) {
-        if (indice === 0) {
-            var ul = document.createElement("ul");
+            var indice = 0;
+
+            for (var i = 0; i < nbre_recette; i++) {
+                if (indice === 0) {
+                    var ul = document.createElement("ul");
+                }
+
+                var li = document.createElement("li");
+
+                var a = document.createElement("a");
+
+                var img = document.createElement("img");
+
+                var titre = document.createElement("h2");
+
+                a.href = "recipe.php?id=" + recettes[i].id; // Lien vers la page de la recette avec l'ID de la recette
+
+                img.src = recettes[i].photo; // Lien vers la photo de la recette
+
+                titre.textContent = recettes[i].nom; // Nom de la recette
+
+                a.appendChild(img);
+
+                li.appendChild(a);
+
+                li.appendChild(titre);
+
+                ul.appendChild(li);
+
+                indice++;
+
+                if (indice === 4) {
+                    page.appendChild(ul);
+                    indice = 0;
+                }
+            }
+
+            if (indice !== 0) {
+                for (var j = indice; j < 4; j++) {
+                    var li = document.createElement("li");
+
+                    var a = document.createElement("a");
+
+                    var img = document.createElement("img");
+
+                    var titre = document.createElement("h2");
+
+                    a.href = ""; // Lien vers la page de la recette (à compléter)
+
+                    img.src = ""; // Lien vers la photo de la recette (à compléter)
+
+                    titre.textContent = ""; // Titre de la recette (à compléter)
+
+                    a.appendChild(img);
+
+                    li.appendChild(a);
+
+                    li.appendChild(titre);
+
+                    ul.appendChild(li);
+                }
+                page.appendChild(ul);
+            }
         }
-
-        var li = document.createElement("li");
-
-        var a = document.createElement("a");
-
-        var img = document.createElement("img");
-
-        var Titre=document.createElement("h2");
-
-        a.href = "https://fr.wikipedia.org/wiki/Attaque_par_force_brute"; /*lien vers la page recette*/
-
-        img.src = "frites.jpeg";  /* lien vers la photo*/
-
-        Titre.textContent="Frites";  /*titre*/
-
-        a.appendChild(img);
-
-        li.appendChild(a);
-
-        li.appendChild(Titre);
-
-        ul.appendChild(li);
-
-        indice++;
-
-        if (indice === 4)
-        {
-            page.appendChild(ul);
-            indice = 0;
-        }
-    }
-
-    if (indice!==0) {
-        for (var j = indice; j < 4; j++) {
-            li = document.createElement("li");
-
-            a = document.createElement("a");
-
-            img = document.createElement("img");
-
-            Titre = document.createElement("h2");
-
-            a.href = ""; /*lien vers la page recette*/
-
-            img.src = "";  /* lien vers la photo*/
-
-            Titre.textContent = "";  /*titre*/
-
-            a.appendChild(img);
-
-            li.appendChild(a);
-
-            li.appendChild(Titre);
-
-            ul.appendChild(li);
-        }
-        page.appendChild(ul);
-    }
+    };
+    xhr.open('GET', '../PHP/get_all_recipes.php', true); // Chemin vers le fichier PHP qui récupère les recettes
+    xhr.send();
 };

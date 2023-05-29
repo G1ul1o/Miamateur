@@ -1,11 +1,8 @@
 .box
 {
     display: flex;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 2%;
     height: 40vh;
-    margin-bottom: 2%;
+    margin: 2% 30%;
 }
 
 .box img
@@ -22,8 +19,7 @@
 }
 .section h2
 {
-    border: 5px solid;
-    border-color: #bed08c;
+    border: 5px solid #bed08c;
     border-radius: 25px;
     padding:1%;
     width: 50%;
@@ -102,7 +98,6 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 6%;
-    height: 400px
 }
 
 .block{
@@ -150,10 +145,7 @@ img{
     justify-content: center;
     text-align: center;
     gap: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-    margin-bottom: 10%;
+    margin: 2% 5% 10%;
     padding: 0;
     list-style: none;
 }

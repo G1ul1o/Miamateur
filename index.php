@@ -59,7 +59,7 @@
 
                 <a class="header-button" href="index.php" target="_blank">Notre selection</a>
 
-                <a class="header-button" href="index.php" target="_blank">Tendance communautaire</a>
+                <a class="header-button" href="HTML/communaute.php" target="_blank">Tendance communautaire</a>
 
                 <a class="header-button" href="index.php" target="_blank">A propos</a>
 

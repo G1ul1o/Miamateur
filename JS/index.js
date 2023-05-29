@@ -1,5 +1,6 @@
 const searchBar = document.getElementById('searchBar');
 const suggestionsContainer = document.getElementById('suggestions-container');
+const searchButton = document.getElementById('searchButton');
 
 searchBar.addEventListener('input', () => {
     const searchString = searchBar.value;
@@ -30,11 +31,6 @@ document.addEventListener('click', (event) => {
     if (!event.target.matches('.input') && !event.target.matches('.suggestion')) {
         suggestionsContainer.innerHTML = '';
     }
-});
-
-const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', () => {
-    const searchString = searchBar.value;
 });
 
 
