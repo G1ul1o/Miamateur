@@ -25,7 +25,7 @@ window.onload = function() {
 
                 var titre = document.createElement("h2");
 
-                a.href = "recipe.php?id=" + recettes[i].id; // Lien vers la page de la recette avec l'ID de la recette
+                a.href = "recette.php?id=" + recettes[i].id; // Lien vers la page de la recette avec l'ID de la recette
 
                 img.src = recettes[i].photo; // Lien vers la photo de la recette
 
