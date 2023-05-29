@@ -299,13 +299,11 @@ body {
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display: block;
     gap: 5%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2%;
+    margin-top: 6%;
     height: 400px
 }
 
@@ -357,6 +355,7 @@ img{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
+    margin-bottom: 10%;
     padding: 0;
     list-style: none;
 }
