@@ -172,19 +172,19 @@ $miniature = $miniature_result->fetchAll();
             <h2>Nos Réseaux</h2>
             <ul id="social_media">
                 <div class="items_social">
-                    <li><img  src = "image/Instagram-logo.png" alt="insta" ></li>
+                    <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
                     <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img  src = "image/facebook-logo.png" alt="facebook"> </li>
+                    <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
                     <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img src = "image/pinterest-logo.png" alt="pinterest"> </li>
+                    <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
                     <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
                 </div>
                 <div class="items_social">
-                    <li><img  src = "image/twitter-logo.png" alt="twitter" > </li>
+                    <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
                     <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
                 </div>
             </ul>
