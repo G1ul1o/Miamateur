@@ -40,7 +40,7 @@
 
         <!-- logo -->
         <a href="../index.php" >
-            <img src = "../image/image-removebg-preview.jpg" class="logo">
+            <img src = "../image/image-removebg-preview.jpg" class    ="logo">
         </a>
 
         <!-- titre -->
@@ -60,7 +60,7 @@
             <div id="suggestions-container"></div>
         </form>
         <!-- bouton compte -->
-        <a class="button-profile" href="../index.php">Mon compte</a>
+        <a class="button-profile" href="connexion.php">Mon compte</a>
     </div>
 
     <div class="alignement_cote">
@@ -68,17 +68,17 @@
             <!-- les boutons du header (Acceuil, notre selection...) -->
             <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
+            <a class="header-button" href="selection.php" target="_blank">Notre selection</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
+            <a class="header-button" href="communaute.php" target="_blank">Tendance communautaire</a>
 
-            <a class="header-button" href="../index.php" target="_blank">A propos</a>
+            <a class="header-button" href="apropos.php" target="_blank">A propos</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Contact</a>
+            <a class="header-button" href="contact.php" target="_blank">Contact</a>
         </div>
     </div>
 </header>
-    <main>
+<main>
         <div class="introduction">
             <div class="presentation">
                 <div class="photo">

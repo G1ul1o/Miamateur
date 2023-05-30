@@ -4,59 +4,58 @@
     <meta charset="UTF-8">
     <title>Miamateur: Recette Communauté</title>
     <script src="../JS/index.js" defer></script>
-    <script src="../JS/communaute.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../CSS/communaute.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
 </head>
 <body>
-    <header id="header">
-        <div class="Header-Container">
-            <!-- marge gauche -->
-            <span style="margin-left: 3%;"></span>
+<header id="header">
+    <div class="Header-Container">
+        <!-- marge gauche -->
+        <span style="margin-left: 3%;"></span>
 
-            <!-- logo -->
-            <a href="../index.php" >
-                <img src = "../image/image-removebg-preview.jpg" class="logo">
-            </a>
+        <!-- logo -->
+        <a href="../index.php" >
+            <img src = "../image/image-removebg-preview.jpg" class    ="logo">
+        </a>
 
-            <!-- titre -->
-            <a href="../index.php" >
-                <h1 class="button-title">Miamateur</h1>
-            </a>
+        <!-- titre -->
+        <a href="../index.php" >
+            <h1 class="button-title">Miamateur</h1>
+        </a>
 
-            <!-- marge centre gauche -->
-            <span style="margin-left: 10%;"></span>
+        <!-- marge centre gauche -->
+        <span style="margin-left: 10%;"></span>
 
-            <!-- barre de recherche -->
-            <form class="input-wrapper" action="search.php" method="get">
-                <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
-                <button class="search-button" id="searchButton">
-                    <span class="search-icon"></span>
-                </button>
-                <div id="suggestions-container"></div>
-            </form>
-            <!-- bouton compte -->
-            <a class="button-profile" href="../index.php">Mon compte</a>
+        <!-- barre de recherche -->
+        <form class="input-wrapper" action="search.php" method="get">
+            <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
+            <button class="search-button" id="searchButton">
+                <span class="search-icon"></span>
+            </button>
+            <div id="suggestions-container"></div>
+        </form>
+        <!-- bouton compte -->
+        <a class="button-profile" href="connexion.php">Mon compte</a>
+    </div>
+
+    <div class="alignement_cote">
+        <div class="alignement">
+            <!-- les boutons du header (Acceuil, notre selection...) -->
+            <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
+
+            <a class="header-button" href="selection.php" target="_blank">Notre selection</a>
+
+            <a class="header-button" href="communaute.php" target="_blank">Tendance communautaire</a>
+
+            <a class="header-button" href="apropos.php" target="_blank">A propos</a>
+
+            <a class="header-button" href="contact.php" target="_blank">Contact</a>
         </div>
-
-        <div class="alignement_cote">
-            <div class="alignement">
-                <!-- les boutons du header (Acceuil, notre selection...) -->
-                <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
-
-                <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
-
-                <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
-
-                <a class="header-button" href="../index.php" target="_blank">A propos</a>
-
-                <a class="header-button" href="../index.php" target="_blank">Contact</a>
-            </div>
-        </div>
-    </header>
-    <main>
+    </div>
+</header>
+<main>
         <div class="box">
             <img src="../image/comu-img.jpeg">
         </div>

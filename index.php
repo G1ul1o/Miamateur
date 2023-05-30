@@ -49,7 +49,7 @@
                 <div id="suggestions-container"></div>
             </form>
             <!-- bouton compte -->
-            <a class="button-profile" href="index.php">Mon compte</a>
+            <a class="button-profile" href="HTML/connexion.php">Mon compte</a>
         </div>
 
         <div class="alignement_cote">
@@ -57,13 +57,13 @@
                 <!-- les boutons du header (Acceuil, notre selection...) -->
                 <a class="active header-button" href="index.php" target="_blank">Accueil</a>
 
-                <a class="header-button" href="index.php" target="_blank">Notre selection</a>
+                <a class="header-button" href="/HTML/selection.php" target="_blank">Notre selection</a>
 
-                <a class="header-button" href="HTML/communaute.php" target="_blank">Tendance communautaire</a>
+                <a class="header-button" href="/HTML/communaute.php" target="_blank">Tendance communautaire</a>
 
-                <a class="header-button" href="index.php" target="_blank">A propos</a>
+                <a class="header-button" href="/HTML/apropos.php" target="_blank">A propos</a>
 
-                <a class="header-button" href="index.php" target="_blank">Contact</a>
+                <a class="header-button" href="/HTML/contact.php" target="_blank">Contact</a>
             </div>
         </div>
     </header>
