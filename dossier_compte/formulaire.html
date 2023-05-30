@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ajouter une recette</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../js/script.js"></script>
+  <link rel= "stylesheet" href="../css/form-style.css">
+</head>
+<body>
+<h1>Ajouter une recette</h1>
+
+<form> <!--action="traitement.php" method="post" enctype="multipart/form-data"-->
+  <label for="photo">Photo :</label>
+  <!--<input type="file" id="photo" name="photo" accept="image/*"><br><br>-->
+  <input type="text" id="photo" name="photo"><br><br>
+
+  <label for="nom">Nom du plat :</label>
+  <input type="text" id="nom" name="nom"><br><br>
+
+  <label for="temps">temps prevue :</label>
+  <input type="number" id="temps" name="temps"
+         min="1" max="180"><p1>min</p1><br><br>
+
+
+  <label for="quantite">Quantite prevue :</label>
+  <input type="number" id="quantite" name="quantite"
+         min="1" max="20"><p1>personne</p1><br><br>
+
+  <label for="tags-container">Tags :</label><br>
+  <div id="tags-container">
+    <div class="tag">
+      <input type="text" name="tag[]" placeholder="Tag 1">
+      <button type="button" class="supprimer-tag">Supprimer</button>
+    </div>
+  </div>
+  <button type="button" id="ajouter-tag">Ajouter un Tag</button>
+  <br>
+
+  <label for="description">Description :</label><br>
+  <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+  <label for="ingredients-container">Ingredient :</label>
+  <div id="ingredients-container">
+    <div class="ingredient">
+      <input type="text" name="ingredient[]" placeholder="Ingredient 1">
+      <button type="button" class="supprimer-ingredient">Supprimer</button>
+    </div>
+  </div>
+  <button type="button" id="ajouter-ingredient">Ajouter un Ingredient</button>
+
+  <br><br>
+  <label for="ustensils-container">Ustensil :</label>
+  <div id="ustensils-container">
+    <div class="ustensil">
+      <input type="text" name="ustensil[]" placeholder="Ustensil 1">
+      <button type="button" class="supprimer-ustensil">Supprimer</button>
+    </div>
+  </div>
+  <button type="button" id="ajouter-ustensil">Ajouter un Ustensil</button>
+  <br>
+
+<!--  <br><label for="etapes-container">Etapes :</label>
+  <div id="etapes-container">
+    <div class="etape">
+      <input type="text" name="etape[]" placeholder="Etape 1" required>
+      <button type="button" class="supprimer-etape">Supprimer</button>
+    </div>
+  </div>
+  <button type="button" id="ajouter-etape">Ajouter une Etape</button>
+ -->
+  <br>
+  <label for="etapes 1">Etapes :</label>
+  <textarea id="etapes 1" name="etapes 1" rows="4" cols="50"></textarea>
+  <button type="button" id="ajouter-etape">Ajouter une Etape</button>
+</form>
+</body>
+</html>
