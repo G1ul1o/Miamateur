@@ -32,7 +32,7 @@ table {
     text-decoration:none;
 }
 
-#nos-contacts{
+.nos-contacts{
     font-family: "Arial", sans-serif;
     color : white;
     text-decoration:none;
@@ -45,4 +45,9 @@ caption {
     font-size: 20px;
     margin-bottom: 10px;
     background-color: #93c47d;
+}
+
+
+.img-table{
+    width: 50px;
 }
