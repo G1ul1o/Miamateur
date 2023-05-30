@@ -43,15 +43,15 @@
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <a class="header-button" href="../index.php" target="_blank">Accueil</a>
+            <a class="header-button" href="../index.php">Accueil</a>
 
-            <a class="header-button" href="selection.php" target="_blank">Notre selection</a>
+            <a class="header-button" href="selection.php">Notre selection</a>
 
-            <a class="header-button" href="communaute.php" target="_blank">Tendance communautaire</a>
+            <a class="header-button" href="communaute.php">Tendance communautaire</a>
 
-            <a class="active header-button" href="apropos.php" target="_blank">A propos</a>
+            <a class="active header-button" href="apropos.php">A propos</a>
 
-            <a class="header-button" href="contact.php" target="_blank">Contact</a>
+            <a class="header-button" href="contact.php">Contact</a>
         </div>
     </div>
 </header>
