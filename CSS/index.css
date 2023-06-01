@@ -1,6 +1,10 @@
 /*
     BODY
  */
+body
+{
+    font-family: Arial,sans-serif;
+}
 
 input::-webkit-input-placeholder {
     text-align: center;
@@ -95,4 +99,16 @@ input:-ms-input-placeholder {
     background-color: #bed08c;
     color: white;
     border:none;
+}
+
+p
+{
+    color: white;
+    text-align: center;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
 }
