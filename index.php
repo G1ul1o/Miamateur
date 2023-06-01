@@ -41,7 +41,7 @@
             <span style="margin-left: 10%;"></span>
 
             <!-- barre de recherche -->
-            <form class="input-wrapper" action="HTML/search.php" method="get">
+            <form class="input-wrapper" action="HTML/search.php" method="get" id="search-form">
                 <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette...">
                 <button class="search-button" id="searchButton">
                     <span class="search-icon"></span>

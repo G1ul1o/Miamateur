@@ -1,43 +1,32 @@
 <?php
-include "../PHP/connection.php";
+include '../PHP/connection.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$id = $_GET['id'];
 
-    // Récupérer les données du formulaire de connexion
-    $email = $_POST['mail'];
-    $mdp = $_POST['mdp'];
+// Récupérer les informations de l'utilisateur depuis la base de données
+$query = "SELECT nom, email FROM utilisateur WHERE id = $id";
 
-    // Préparer la requête SQL pour vérifier les informations d'identification
-    $sql = "SELECT * FROM utilisateur WHERE email='$email' AND mdp='$mdp'";
+$stmt = $conn->prepare($query);
+$stmt->execute();
 
-
-    // Exécuter la requête SQL
-    $result = $conn->query($sql);
-
-    // Vérifier si les informations d'identification sont valides
-    if ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        $id = $row['id'];
-        header("Location: compte.php?id=$id");
-        exit();
-    } else {
-        // Informations d'identification invalides, afficher un message d'erreur
-        $error_message = "Adresse e-mail ou mot de passe incorrect.";
-    }
+// Vérifier si des résultats ont été retournés
+if ($stmt->rowCount() > 0) {
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $nom = $row['nom'];
+    $email = $row['email'];
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>connexion</title>
+    <title>Miamateur: Recette Communauté</title>
     <script src="../JS/index.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="../CSS/inscription.css">
+    <link rel="stylesheet" href="../CSS/compte.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
-
 </head>
-
 <body>
 <header id="header">
     <div class="Header-Container">
@@ -72,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <a class="active header-button" href="../index.php" target="_self">Accueil</a>
+            <a class="header-button" href="../index.php" target="_self">Accueil</a>
 
             <a class="header-button" href="selection.php" target="_self">Notre selection</a>
 
@@ -85,33 +74,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </header>
 <main>
-<div class="container">
-    <a class="button " href="inscription.php">inscription</a>
-    <a class="button child" href="connexion.php">connexion</a>
-    <section>
-        <br>
-        <div class="container-form">
-            <?php if (isset($error_message)) { ?>
-                <p class="error"><?php echo $error_message; ?></p>
-            <?php } ?>
-            <form method="post" action="connexion.php">
-                <fieldset>
-                    <legend>CONNEXION</legend>
-                    <label for="mail" class="ordre">Adresse mail:</label>
-                    <input type="mail" id="mail" name="mail">
-                    <br>
-                    <label for="mdp" class="ordre">Mot de passe:</label>
-                    <input type="text" id="mdp" name="mdp">
-                </fieldset>
+    <div class="container">
+        <div class="user">
+            <h1>Informations de l'utilisateur</h1>
 
-                <fieldset>
-                    <button type="submit">se connecter</button>
+            <p class="name">Nom Prenom: <?php echo $nom?></p>
+            <p class="email">Adresse mail : <?php echo $email ?></p>
 
-                </fieldset>
-            </form>
+
+            <div class="recipe-section">
+                <h2>Ajouter une recette</h2>
+                <p>Vous pouvez ajouter vos propres recettes en cliquant sur le bouton ci-dessous :</p>
+                <a href="formulaire.php" class="recipe-lien"><button>Ajouter une recette</button></a>
+            </div>
         </div>
-    </section>
-</div>
+    </div>
 </main>
 <footer class="show-footer">
     <div id="lefooter">
