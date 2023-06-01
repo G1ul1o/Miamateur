@@ -1,3 +1,24 @@
+<?php
+include "../PHP/connection.php";
+// Récupérer les données du formulaire d'inscription
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nom = $_POST['Nom'];
+    $email = $_POST['mail'];
+    $mdp = $_POST['mdp'];
+
+    echo "Nom : " . $nom . "<br>";
+    echo "Email : " . $email . "<br>";
+    echo "Mot de passe : " . $mdp . "<br>";
+
+    // Préparer la requête SQL pour insérer les données dans la table des utilisateurs
+    $sql = "INSERT INTO utilisateur (nom, email, mdp) VALUES ('$nom', '$email', '$mdp')";
+
+    // Exécuter la requête SQL
+    $result = $conn->query($sql);
+    header('Location: connexion.php');
+    exit; // Important: terminer le script après la redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +29,6 @@
     <link rel="stylesheet" href="../CSS/inscription.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
-
 </head>
 
 <body>
@@ -64,7 +84,7 @@
     <section>
         <br>
         <div class="container-form">
-            <form>
+            <form method="post" action="inscription.php">
                 <fieldset>
                     <legend>INSCRIPTION</legend>
                     <label for="Nom" class="ordre">Nom Prénom:</label>
@@ -78,8 +98,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <button><a href="inscription.php">s'inscrire</a></button>
-
+                    <button type="submit">s'inscrire</button>
                 </fieldset>
             </form>
         </div>
