@@ -1,4 +1,7 @@
-
+body
+{
+    font-family: Arial,sans-serif;
+}
 .section h2{
     border: 5px solid;
     border-color: #bed08c;
@@ -75,4 +78,16 @@
     color: white;
     border:none;
     font-family: Arial, sans-serif;
+}
+
+p
+{
+    color: white;
+    text-align: center;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
 }
