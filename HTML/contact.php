@@ -110,22 +110,22 @@
         </thead>
         <tbody>
         <tr>
-            <td><img class='img-table' alt='insta' src="../images/Instagram_icon.png.webp"></td>
+            <td><img class='img-table' alt='insta' src="../image/Instagram-logo.png"></td>
             <td>miamateur</td>
             <td>05 janvier 2023</td>
         </tr>
         <tr>
-            <td><img class='img-table' alt='insta' src="../images/Facebook_f_logo_(2019).svg.png"></td>
+            <td><img class='img-table' alt='insta' src="../image/facebook-logo.png"></td>
             <td>facemateur</td>
             <td>15 mars 2023</td>
         </tr>
         <tr>
-            <td><img class='img-table' alt='insta' src="../images/580b57fcd9996e24bc43c52e.png"></td>
+            <td><img class='img-table' alt='insta' src="../image/pinterest-logo.png"></td>
             <td>miamart</td>
             <td>30 novembre 2022</td>
         </tr>
         <tr>
-            <td><img class='img-table' alt='insta' src="../images/logo-rond-twitter.png"></td>
+            <td><img class='img-table' alt='insta' src="../image/twitter-logo.png"></td>
             <td>miamasterclass</td>
             <td>23 mars 2023</td>
         </tr>

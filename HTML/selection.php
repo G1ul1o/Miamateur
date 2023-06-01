@@ -4,16 +4,15 @@
 
 <head>
 
-    <link rel="stylesheet" href="style_selection.css">
+    <link rel="stylesheet" href="../CSS/selection.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
-
-    <script type="text/javascript" src="../JS/selection.js"></script>
+    <script src="../JS/communaute.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/index.js" defer></script>
 
     <meta charset="UTF-8">
-
     <title>Miamateur: Recette Sélectionné</title>
-
 </head>
 
 
