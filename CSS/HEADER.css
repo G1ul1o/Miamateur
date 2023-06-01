@@ -185,10 +185,6 @@ input:-ms-input-placeholder {
 /*fait en sorte que le header-button du nom de la page sur laquelle on est soit de couleur verrte et pas grise*/
 .active {
     color : #93c47d;
-    font-family: "Arial", sans-serif;
-    text-decoration:none;
-    border-width : 10px;
-    width: 2%;
 }
 .logo{
     width : 80px;
