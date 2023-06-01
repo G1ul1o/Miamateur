@@ -1,3 +1,29 @@
+<?php
+include "../PHP/connection.php";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // Récupérer les données du formulaire de connexion
+    $email = $_POST['mail'];
+    $mdp = $_POST['mdp'];
+
+    // Préparer la requête SQL pour vérifier les informations d'identification
+    $sql = "SELECT * FROM utilisateur WHERE email='$email' AND mdp='$mdp'";
+
+    // Exécuter la requête SQL
+    $result = $conn->query($sql);
+
+    // Vérifier si les informations d'identification sont valides
+    if ($result->num_rows > 0) {
+        // Utilisateur authentifié, rediriger vers la page compte.php
+        header('Location: compte.php');
+        exit();
+    } else {
+        // Informations d'identification invalides, afficher un message d'erreur
+        $error_message = "Adresse e-mail ou mot de passe incorrect.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +90,10 @@
     <section>
         <br>
         <div class="container-form">
-            <form>
+            <?php if (isset($error_message)) { ?>
+                <p class="error"><?php echo $error_message; ?></p>
+            <?php } ?>
+            <form method="post" action="connexion.php">
                 <fieldset>
                     <legend>CONNEXION</legend>
                     <label for="mail" class="ordre">Adresse mail:</label>
