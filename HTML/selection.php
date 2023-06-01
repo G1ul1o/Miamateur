@@ -51,15 +51,15 @@
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
+            <a class="active header-button" href="../index.php" target="_self">Accueil</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
+            <a class="header-button" href="/HTML/selection.php" target="_self">Notre selection</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
+            <a class="header-button" href="/HTML/communaute.php" target="_self">Tendance communautaire</a>
 
-            <a class="header-button" href="../index.php" target="_blank">A propos</a>
+            <a class="header-button" href="/HTML/apropos.php" target="_self">A propos</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Contact</a>
+            <a class="header-button" href="/HTML/contact.php" target="_self">Contact</a>
         </div>
     </div>
 </header>
@@ -67,7 +67,7 @@
     <main>
         <div class="box">
 
-            <img src="friends-happiness-enjoying-dinning-eating-concept.jpeg">
+            <img src="../image/photo_selection.jpeg">
 
         </div>
 
@@ -134,19 +134,19 @@
         <h2>Nos Réseaux</h2>
         <ul id="social_media">
             <div class="items_social">
-                <li><img  src = "image/Instagram-logo.png" alt="insta" ></li>
+                <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
                 <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
             </div>
             <div class="items_social">
-                <li><img  src = "image/facebook-logo.png" alt="facebook"> </li>
+                <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
                 <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
             </div>
             <div class="items_social">
-                <li><img src = "image/pinterest-logo.png" alt="pinterest"> </li>
+                <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
                 <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
             </div>
             <div class="items_social">
-                <li><img  src = "image/twitter-logo.png" alt="twitter" > </li>
+                <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
                 <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
             </div>
         </ul>
