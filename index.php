@@ -87,7 +87,8 @@
             </div>
             <div class="conteneur">
                 <div class="rectangle">
-
+                                        <h1>A propos de nous:</h1>
+                    <p>Nous sommes une équipe d'étudiants réalisant un projet en deuxième année.<br> Nous sommes animés par la volonté d'aider les étudiants dans leur vie quotidienne. Cela passe par de l'aide à trouver des recettes peu chères et simples à réaliser</p>
                 </div>
             </div>
 
