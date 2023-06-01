@@ -5,6 +5,7 @@
     <title>Miamateur: Recette Communauté</title>
     <script src="../JS/index.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/communaute.js" defer></script>
     <link rel="stylesheet" href="../CSS/communaute.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
