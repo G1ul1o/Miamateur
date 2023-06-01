@@ -128,3 +128,8 @@ button:hover {
 #ajouter-tag:hover {
     background-color: #28a745;
 }
+
+.affirmation{
+    margin : 1%;
+    text-align: center;
+}
