@@ -57,7 +57,7 @@ include 'connection.php';
         <button type="button" onclick="ajouterUstensile()">Ajouter un ustensile</button>
     </div>
 
-    <input type="submit" value="Ajouter la recette">
+    <input type="submit" value="Ajouter la recette", class="mon-bouton-envoie", onclick="recuperer()">
 
 </form>
 </body>
