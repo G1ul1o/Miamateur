@@ -1,23 +1,23 @@
-body {
+main body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 0;
 }
 
-h1 {
+main h1 {
     text-align: center;
 }
 
-form {
+main form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-label {
+ main label {
     font-weight: bold;
 }
 
-input[type="text"],
+main input[type="text"],
 textarea {
     width: 100%;
     padding: 8px;
@@ -26,7 +26,7 @@ textarea {
     border-radius: 4px;
 }
 
-input[type="text"]#tags {
+main input[type="text"]#tags {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -34,7 +34,7 @@ input[type="text"]#tags {
     border-radius: 4px;
 }
 
-button {
+main button {
     padding: 8px 16px;
     background-color: #95a662;
     color: #fff;
@@ -43,7 +43,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+main button:hover {
     background-color: #0069d9;
 }
 
@@ -157,7 +157,7 @@ button:hover {
     position: relative;
     display: inherit;
 }
-select {
+main select {
     margin-left: 2%;
     padding: 2px 6px;
     font-size: 11px;
@@ -168,11 +168,11 @@ select {
     cursor: pointer;
 }
 
-select:hover {
+main select:hover {
     background-color: #0069d9;
 }
 
-select option {
+main select option {
     background-color: #fff;
     color: #000;
 }
