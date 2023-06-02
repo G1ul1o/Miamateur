@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
     const ingredientsContainer = document.getElementById('ingredients-container');
     const boutonAjouterIngredient = document.getElementById('ajouter-ingredient');

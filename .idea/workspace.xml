@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="NEW SEARCH FUNCTION">
-      <change afterPath="$PROJECT_DIR$/autocomplete.php" afterDir="false" />
+    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="page inscription+connexion+une nouvelle version de formulaire+information personnelle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/recette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/recette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/form-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/form-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dossier_compte/formulaire.html" beforeDir="false" afterPath="$PROJECT_DIR$/dossier_compte/formulaire.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+    </list>
+    <list id="110febbe-85e5-4992-ac2c-e1d8834047cb" name="Changes by giuga" comment="">
+      <change beforePath="$PROJECT_DIR$/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/formulaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -38,6 +39,24 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/js/script.js">
+      <ranges>
+        <range start1="0" end1="2" start2="0" end2="5" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="21" end1="21" start2="24" end2="26" changelist="61616e5f-4281-4511-b5af-59d96383eb02" />
+        <range start1="29" end1="29" start2="34" end2="35" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="35" end1="35" start2="41" end2="54" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="37" end1="37" start2="56" end2="57" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="38" end1="38" start2="58" end2="59" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="44" end1="44" start2="65" end2="66" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="56" end1="56" start2="78" end2="79" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="62" end1="62" start2="85" end2="86" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="79" end1="79" start2="103" end2="104" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="85" end1="85" start2="110" end2="111" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+        <range start1="88" end1="88" start2="114" end2="319" changelist="110febbe-85e5-4992-ac2c-e1d8834047cb" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -49,9 +68,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jeanj/PhpstormProjects/programmation Web/TP2&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -74,6 +95,17 @@
       <workItem from="1683031567203" duration="4318000" />
       <workItem from="1683038264289" duration="1496000" />
       <workItem from="1683097770598" duration="10059000" />
+      <workItem from="1685007809791" duration="5945000" />
+      <workItem from="1685288056813" duration="9776000" />
+      <workItem from="1685307304574" duration="908000" />
+      <workItem from="1685370503198" duration="1729000" />
+      <workItem from="1685434654551" duration="41000" />
+      <workItem from="1685447651671" duration="561000" />
+      <workItem from="1685458281825" duration="269000" />
+      <workItem from="1685633798700" duration="2926000" />
+      <workItem from="1685647424739" duration="51000" />
+      <workItem from="1685650865305" duration="6576000" />
+      <workItem from="1685723893265" duration="2486000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -110,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683107150763</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="page inscription+connexion+formulaire">
+      <created>1685448184349</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685448184349</updated>
+    </task>
+    <task id="LOCAL-00007" summary="page inscription+connexion+une nouvelle version de formulaire+information personnelle">
+      <created>1685647275626</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685647275627</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +179,8 @@
     <MESSAGE value="other files" />
     <MESSAGE value="UPDATE HEADER" />
     <MESSAGE value="NEW SEARCH FUNCTION" />
-    <option name="LAST_COMMIT_MESSAGE" value="NEW SEARCH FUNCTION" />
+    <MESSAGE value="page inscription+connexion+formulaire" />
+    <MESSAGE value="page inscription+connexion+une nouvelle version de formulaire+information personnelle" />
+    <option name="LAST_COMMIT_MESSAGE" value="page inscription+connexion+une nouvelle version de formulaire+information personnelle" />
   </component>
 </project>
