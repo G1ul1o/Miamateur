@@ -36,3 +36,43 @@ const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', () => {
     const searchString = searchBar.value;
 });
+
+
+
+// code page recette !!!!
+//le code pour le zoom sur les photos de la page recette
+const images = document.querySelectorAll('img');
+
+images.forEach(image => {
+    // Ajoute un écouteur d'événement de clic
+    image.addEventListener('click', () => {
+        // Crée un élément de superposition pour afficher l'image en premier plan
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        // Crée un élément d'image agrandie
+        const enlargedImage = document.createElement('img');
+        enlargedImage.src = image.src;
+        enlargedImage.classList.add('enlarged-image');
+
+        // Aaoute l'image agrandie à la superposition
+        overlay.appendChild(enlargedImage);
+
+        // ajoute la superposition à la page
+        document.body.appendChild(overlay);
+
+        // regarde si l'utilisateur clic qq part pour fermer l'overlay
+        overlay.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+        });
+    });
+});
+
+
+
+
+//le code pour les menus déroulants de la page recette
+function toggleMenu(menuName) {
+    const menuContent = document.querySelector(`.menu-content.${menuName}`);
+    menuContent.classList.toggle('show');
+}
