@@ -71,6 +71,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const tagsContainer = document.getElementById('tags-container');
+    const boutonAjouterTag = document.getElementById('ajouter-tag');
+
+    // Ajouter un tag
+    boutonAjouterTag.addEventListener('click', function() {
+        const nouveauTag = document.createElement('div');
+        nouveauTag.className = 'tag';
+        nouveauTag.innerHTML = `
+            <input type="text" id="tags[]" name="tags[]" placeholder="tags ${tagsContainer.childElementCount + 1}">
+            <button type="button" class="supprimer-tag">Supprimer</button>
+        `;
+        tagsContainer.appendChild(nouveauTag);
+        nb_tag++;
+    });
+
+    // Supprimer un tag
+    tagsContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('supprimer-tag')) {
+            e.target.parentElement.remove();
+            nb_tag--;
+        }
+    });
+});
+
 
 function generer()
 {
@@ -106,7 +131,7 @@ function generer()
     tags = tags.replace(/\.(?=[^.]*$)/, ""); //retirer le dernier caractère qui est "." (?=[^.]*$ s'assure que c'est le dernier point
 
     var inputs = document.querySelectorAll('input[name="ingredient[]"]');
-    var inputs_mesure = document.querySelectorAll('select[name="mesures"]');
+    var inputs_mesure = document.querySelectorAll('select[name="mesures[]"]');
 
 
 

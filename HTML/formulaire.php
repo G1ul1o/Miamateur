@@ -100,10 +100,10 @@
             <div class="ingredient">
 
                 <label for="quantite0">Quantite:</label>
-                <input type="number" id="quantite0" name="quantite"
+                <input type="number" id="quantite0" name="quantite[]"
                        min="1" max="2000">
 
-                <select name="mesures[]" id="mesure-select">
+                <select name="mesure[]" id="mesure-select">
                     <option value="">--Choisir une mesure--</option>
                     <option value=""></option>
                     <option value="pincée">pincée</option>
