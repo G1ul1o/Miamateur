@@ -114,11 +114,6 @@ button:hover {
     background-color: #c82333;
 }
 
-#tags-container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
-}
 
 #ajouter-tag {
     display: block;
@@ -127,4 +122,67 @@ button:hover {
 
 #ajouter-tag:hover {
     background-color: #28a745;
+}
+
+.affirmation{
+    margin : 1%;
+    text-align: center;
+
+}
+.boutton{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tags-container ul
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 0;
+    list-style: none;
+}
+
+.tags-container li
+{
+    justify-content: center;
+    position: relative;
+    display: inherit;
+}
+select {
+    margin-left: 2%;
+    padding: 2px 6px;
+    font-size: 11px;
+    background-color: #6e6bc0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #0069d9;
+}
+
+select option {
+    background-color: #fff;
+    color: #000;
+}
+
+.ingredient input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 2%;
 }

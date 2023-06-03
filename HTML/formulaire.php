@@ -1,8 +1,3 @@
-<?php
-
-include '../PHP/connection.php';
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +18,7 @@ include '../PHP/connection.php';
 
         <!-- logo -->
         <a href="../index.php" >
-            <img src = "../image/image-removebg-preview.jpg" class    ="logo">
+            <img src="../image/image-removebg-preview.jpg" class="logo">
         </a>
 
         <!-- titre -->
@@ -51,7 +46,7 @@ include '../PHP/connection.php';
             <!-- les boutons du header (Acceuil, notre selection...) -->
             <a class="header-button" href="../index.php" target="_self">Accueil</a>
 
-            <a class="header-button" href="selection.php" target="_self">Notre selection</a>
+            <a class="header-button" href="selection.php" target="_self">Notre sélection</a>
 
             <a class="header-button" href="communaute.php" target="_self">Tendance communautaire</a>
 
@@ -61,90 +56,113 @@ include '../PHP/connection.php';
         </div>
     </div>
 </header>
-    <main>
-        <h1>Ajouter une recette</h1>
+<main>
+    <h1>Ajouter une recette</h1>
 
-        <form> <!--action="traitement.php" method="post" enctype="multipart/form-data"-->
-            <label for="photo">Photo :</label>
-            <!--<input type="file" id="photo" name="photo" accept="image/*"><br><br>-->
-            <input type="text" id="photo" name="photo"><br><br>
+    <form id="formulaire" action="../PHP/add_recette.php" method="POST">
+        <label for="nom">Nom du plat :</label>
+        <input type="text" id="nom" name="nom" placeholder="Poulet rôti au four"><br><br>
 
-            <label for="nom">Nom du plat :</label>
-            <input type="text" id="nom" name="nom"><br><br>
+        <label for="photo">Photo :</label>
+        <!--<input type="file" id="photo" name="photo" accept="image/*"><br><br>-->
+        <input type="text" id="photo" name="photo" placeholder="exemple : cuisine.com/poulet.jpeg"><br><br>
 
-            <label for="temps">temps prevue :</label>
-            <input type="number" id="temps" name="temps"
-                   min="1" max="180"><p1>min</p1><br><br>
+        <label for="miniature1">Miniature 1 :</label>
+        <input type="text" id="miniature1" name="miniature1" placeholder="exemple : cuisine.com/poulet.jpeg"><br><br>
 
+        <label for="miniature2">Miniature 2 :</label>
+        <input type="text" id="miniature2" name="miniature2" placeholder="exemple : cuisine.com/poulet.jpeg"><br><br>
 
-            <label for="quantite">Quantite prevue :</label>
-            <input type="number" id="quantite" name="quantite"
-                   min="1" max="20"><p1>personne</p1><br><br>
+        <label for="miniature3">Miniature 3 :</label>
+        <input type="text" id="miniature3" name="miniature3" placeholder="exemple : cuisine.com/poulet.jpeg"><br><br>
 
-            <label for="tags-container">Tags :</label><br>
-            <div id="tags-container">
-                <div class="tag">
-                    <input type="text" name="tag[]" placeholder="Tag 1">
-                    <button type="button" class="supprimer-tag">Supprimer</button>
-                </div>
-            </div>
-            <button type="button" id="ajouter-tag">Ajouter un Tag</button>
-            <br>
+        <label for="temps_preparation">temps de préparation :</label>
+        <input type="number" id="temps_preparation" name="temps_preparation" min="1" max="180"><p1>min</p1><br><br>
 
-            <label for="description">Description :</label><br>
-            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+        <label for="temps_cuisson">temps cuisson :</label>
+        <input type="number" id="temps_cuisson" name="temps_cuisson" min="1" max="180"><p1>min</p1><br><br>
 
-            <label for="ingredients-container">Ingredient :</label>
-            <div id="ingredients-container">
-                <div class="ingredient">
-                    <input type="text" name="ingredient[]" placeholder="Ingredient 1">
-                    <button type="button" class="supprimer-ingredient">Supprimer</button>
-                </div>
-            </div>
-            <button type="button" id="ajouter-ingredient">Ajouter un Ingredient</button>
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" name="prix" min="1" max="180"><p1>euros</p1><br><br>
 
-            <br><br>
-            <label for="ustensils-container">Ustensil :</label>
-            <div id="ustensils-container">
-                <div class="ustensil">
-                    <input type="text" name="ustensil[]" placeholder="Ustensil 1">
-                    <button type="button" class="supprimer-ustensil">Supprimer</button>
-                </div>
-            </div>
-            <button type="button" id="ajouter-ustensil">Ajouter un Ustensil</button>
-            <br>
-        <input type="submit" value="Ajouter la recette">
+        <label for="portion">Portion :</label>
+        <input type="number" id="portion" name="portion" min="1" max="20"><p1>personne</p1><br><br>
 
-    </form>
-    </main>
-    <footer class="show-footer">
-        <div id="lefooter">
-            <ul id="boutons-cliquables">
-                <li><a href="#" class="lien_footer">Accueil</a></li>
-                <li><a href="#" class="lien_footer">À propos</a></li>
-                <li><a href="#" class="lien_footer">Contact</a></li>
-            </ul>
-            <br>
-            <h2>Nos Réseaux</h2>
-            <ul id="social_media">
-                <div class="items_social">
-                    <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
-                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
-                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
-                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
-                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
-                </div>
-            </ul>
+        <div class="tags-container" id="tags-container">
+
         </div>
-    </footer>
+
+        <label for="description">Description :</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" placeholder="Un délicieux poulet rôti"></textarea><br><br>
+
+        <div id="ingredients-container">
+
+            <div class="ingredient">
+
+                <label for="quantite0">Quantite:</label>
+                <input type="number" id="quantite0" name="quantite"
+                       min="1" max="2000">
+
+                <select name="mesures" id="mesure-select">
+                    <option value="2">--Choisir une mesure--
+                    </option>
+                    <option value="gramme">gramme</option>
+                    <option value="litre">litre</option>
+                    <option value="cuillere_a_cafe">cuillère à café</option>
+                    <option value="grande_cuillère">grande_cuillère</option>
+
+                </select>
+
+                <input type="text" name="ingredient[]" placeholder="Ingredient 1">
+
+                <button type="button" class="supprimer-ingredient">Supprimer</button>
+            </div>
+        </div>
+        <button type="button" id="ajouter-ingredient">Ajouter un Ingrédient</button>
+
+        <br><br>
+        <label for="ustensils-container">Ustensil :</label>
+        <div id="ustensils-container">
+            <div class="ustensil">
+                <input type="text" name="ustensil[]" placeholder="Ustensil 1">
+                <button type="button" class="supprimer-ustensil">Supprimer</button>
+            </div>
+        </div>
+        <button type="button" id="ajouter-ustensil">Ajouter un Ustensil</button>
+        <br>
+
+        <label for="instructions">instructions :</label>
+        <input type="text" id="instructions" name="instructions"><br><br>
+
+        <div class="affirmation">
+            <input class="boutton" type="submit" value="Ajouter la recette" onclick="generer()">
+        </div>
+    </form>
+</main>
+<footer class="show-footer">
+    <div id="lefooter">
+        <ul id="boutons-cliquables">
+            <li><a href="#" class="lien_footer">Accueil</a></li>
+            <li><a href="#" class="lien_footer">À propos</a></li>
+            <li><a href="#" class="lien_footer">Contact</a></li>
+        </ul>
+        <br>
+        <h2>Nos Réseaux</h2>
+        <ul id="social_media">
+            <div class="items_social">
+                <li><img  src="../image/Instagram-logo.png" alt="insta"></li>
+                <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+            </div>
+            <div class="items_social">
+                <li><img  src="../image/twitter-logo.png" alt="tw"></li>
+                <li><a href="#" class="lien_footer_reseau">@miamateur</a></li>
+            </div>
+            <div class="items_social">
+                <li><img  src="../image/facebook-logo.png" alt="fb"></li>
+                <li><a href="#" class="lien_footer_reseau">miamateur</a></li>
+            </div>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

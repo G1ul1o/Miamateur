@@ -6,17 +6,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['mail'];
     $mdp = $_POST['mdp'];
 
-    echo "Nom : " . $nom . "<br>";
-    echo "Email : " . $email . "<br>";
-    echo "Mot de passe : " . $mdp . "<br>";
-
     // Préparer la requête SQL pour insérer les données dans la table des utilisateurs
     $sql = "INSERT INTO utilisateur (nom, email, mdp) VALUES ('$nom', '$email', '$mdp')";
 
     // Exécuter la requête SQL
     $result = $conn->query($sql);
     header('Location: connexion.php');
-    exit; // Important: terminer le script après la redirection
+    exit;
 }
 ?>
 <!DOCTYPE html>
