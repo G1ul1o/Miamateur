@@ -5,10 +5,11 @@
     $id_recette = $_GET['id'];
 
     $recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
-    $ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
+    $ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient INNER JOIN mesures on mesures.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
     $tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
     $ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
     $miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
+
 
     $recette_result = $conn->query($recette_query);
     $ingredients_result = $conn->query($ingredients_query);
@@ -21,8 +22,9 @@
     $tags = $tags_result->fetchAll();
     $ustensiles = $ustensiles_result->fetchAll();
     $miniature = $miniature_result->fetchAll();
+
 ?>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
@@ -123,7 +125,7 @@
                 <div class="menu-content ingredients">
                     <ul>
                         <?php foreach ($ingredients as $row): ?>
-                            <li><?php echo $row['quantite'] . ' ' . $row['nom']; ?></li>
+                            <li><?php echo $row['quantite'] . $row['unite'] .' ' . $row['nom']; ?></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
