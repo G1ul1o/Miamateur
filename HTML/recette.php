@@ -1,27 +1,27 @@
 <?php
-    include '../PHP/connection.php';
+include '../PHP/connection.php';
 
-    // Récupération de l'id de la recette depuis l'URL
-    $id_recette = $_GET['id'];
+// Récupération de l'id de la recette depuis l'URL
+$id_recette = $_GET['id'];
 
-    $recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
-    $ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient INNER JOIN mesures on mesures.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
-    $tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
-    $ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
-    $miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
+$recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
+$ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient INNER JOIN mesures on mesures.id=recettes_ingredients.id_mesures WHERE Id_recette =" . $id_recette;
+$tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
+$ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
+$miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
 
 
-    $recette_result = $conn->query($recette_query);
-    $ingredients_result = $conn->query($ingredients_query);
-    $tags_result = $conn->query($tags_query);
-    $ustensiles_result = $conn->query($ustensiles_query);
-    $miniature_result = $conn->query($miniature_query);
+$recette_result = $conn->query($recette_query);
+$ingredients_result = $conn->query($ingredients_query);
+$tags_result = $conn->query($tags_query);
+$ustensiles_result = $conn->query($ustensiles_query);
+$miniature_result = $conn->query($miniature_query);
 
-    $recette = $recette_result->fetch();
-    $ingredients = $ingredients_result->fetchAll();
-    $tags = $tags_result->fetchAll();
-    $ustensiles = $ustensiles_result->fetchAll();
-    $miniature = $miniature_result->fetchAll();
+$recette = $recette_result->fetch();
+$ingredients = $ingredients_result->fetchAll();
+$tags = $tags_result->fetchAll();
+$ustensiles = $ustensiles_result->fetchAll();
+$miniature = $miniature_result->fetchAll();
 
 ?>
 <html lang="fr">
@@ -82,113 +82,113 @@
     </div>
 </header>
 <main>
-        <div class="introduction">
-            <div class="presentation">
-                <div class="photo">
-                    <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
-                </div>
-                <div class="miniatures">
-                    <?php foreach ($miniature as $row): ?>
-                        <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
-                    <?php endforeach; ?>
-                </div>
+    <div class="introduction">
+        <div class="presentation">
+            <div class="photo">
+                <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
             </div>
-            <div class="paragraphe">
-                <div class="titre">
-                    <h1><?php echo $recette['nom']; ?></h1>
-                </div>
-                <div class="p1">
-                    <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
-                    <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
-                </div>
-                <div class="p1">
-                    <p>Temps de cuisson : <span class="para"><?php echo $recette['temps_cuisson']; ?> min</span></p>
-                    <p>Prix : <span class="para"><?php echo $recette['prix']; ?> €</span></p>
-                </div>
-                <div class="tag">
-                    <?php foreach ($tags as $row): ?>
-                        <span class="tag">#<?php echo $row['nom']; ?></span>
-                    <?php endforeach; ?>
-                </div>
-                <div class="parametre">
-                    <h2>Description</h2>
-                    <div class="description">
-                        <p><?php echo $recette['description']; ?></p>
-                    </div>
+            <div class="miniatures">
+                <?php foreach ($miniature as $row): ?>
+                    <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="paragraphe">
+            <div class="titre">
+                <h1><?php echo $recette['nom']; ?></h1>
+            </div>
+            <div class="p1">
+                <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
+                <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
+            </div>
+            <div class="p1">
+                <p>Temps de cuisson : <span class="para"><?php echo $recette['temps_cuisson']; ?> min</span></p>
+                <p>Prix : <span class="para"><?php echo $recette['prix']; ?> €</span></p>
+            </div>
+            <div class="tag">
+                <?php foreach ($tags as $row): ?>
+                    <span class="tag">#<?php echo $row['nom']; ?></span>
+                <?php endforeach; ?>
+            </div>
+            <div class="parametre">
+                <h2>Description</h2>
+                <div class="description">
+                    <p><?php echo $recette['description']; ?></p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="élément">
-            <div class="menu">
-                <button class="menu-btn" onclick="toggleMenu('ingredients')">Ingrédient</button>
-                <div class="menu-content ingredients">
-                    <ul>
-                        <?php foreach ($ingredients as $row): ?>
-                            <li><?php echo $row['quantite'] . $row['unite'] .' ' . $row['nom']; ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="menu">
-                <button class="menu-btn" onclick="toggleMenu('ustensiles')">Ustensiles</button>
-                <div class="menu-content ustensiles">
-                    <ul>
-                        <?php foreach ($ustensiles as $row): ?>
-                                <li><?php echo $row['nom']; ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
+    <div class="élément">
+        <div class="menu">
+            <button class="menu-btn" onclick="toggleMenu('ingredients')">Ingrédient</button>
+            <div class="menu-content ingredients">
+                <ul>
+                    <?php foreach ($ingredients as $row): ?>
+                        <li><?php echo $row['quantite'] . $row['unite'] .' ' . $row['nom']; ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
-        <div class="Recette">
-            <dl>
-                <dt>Recette</dt>
+        <div class="menu">
+            <button class="menu-btn" onclick="toggleMenu('ustensiles')">Ustensiles</button>
+            <div class="menu-content ustensiles">
                 <ul>
-                    <?php
-                    $instructions = explode(".", $recette["instructions"]);
-                    $i = 1;
-                    foreach ($instructions as $instruction) {
-                        if (empty($instruction)) {
-                            continue;
-                        }else{
+                    <?php foreach ($ustensiles as $row): ?>
+                        <li><?php echo $row['nom']; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="Recette">
+        <dl>
+            <dt>Recette</dt>
+            <ul>
+                <?php
+                $instructions = explode(".", $recette["instructions"]);
+                $i = 1;
+                foreach ($instructions as $instruction) {
+                    if (empty($instruction)) {
+                        continue;
+                    }else{
                         echo "<li>Etape $i : " . trim($instruction) . "</li>";
                         $i++;
-                        }
                     }
-                    ?>
-                </ul>
-            </dl>
-        </div>
-    </main>
-    <footer class="show-footer">
-        <div id="lefooter">
-            <ul id="boutons-cliquables">
-                <li><a href="#" class="lien_footer">Accueil</a></li>
-                <li><a href="#" class="lien_footer">À propos</a></li>
-                <li><a href="#" class="lien_footer">Contact</a></li>
+                }
+                ?>
             </ul>
-            <br>
-            <h2>Nos Réseaux</h2>
-            <ul id="social_media">
-                <div class="items_social">
-                    <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
-                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
-                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
-                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
-                </div>
-                <div class="items_social">
-                    <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
-                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
-                </div>
-            </ul>
-        </div>
-    </footer>
+        </dl>
+    </div>
+</main>
+<footer class="show-footer">
+    <div id="lefooter">
+        <ul id="boutons-cliquables">
+            <li><a href="#" class="lien_footer">Accueil</a></li>
+            <li><a href="#" class="lien_footer">À propos</a></li>
+            <li><a href="#" class="lien_footer">Contact</a></li>
+        </ul>
+        <br>
+        <h2>Nos Réseaux</h2>
+        <ul id="social_media">
+            <div class="items_social">
+                <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
+                <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+            </div>
+            <div class="items_social">
+                <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
+                <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+            </div>
+            <div class="items_social">
+                <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
+                <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+            </div>
+            <div class="items_social">
+                <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
+                <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+            </div>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

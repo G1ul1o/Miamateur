@@ -11,7 +11,7 @@ $id_recette = $id_recette_row['id'];
 // Requête SQL pour récupérer les recettes correspondantes à la recherche
 
 $recette_query = "SELECT * FROM `recettes` WHERE id =" . $id_recette;
-$ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient INNER JOIN mesures on mesures.id=recettes_ingredients.id_ingredient WHERE Id_recette =" . $id_recette;
+$ingredients_query ="SELECT * FROM recettes_ingredients INNER JOIN ingredients on ingredients.id=recettes_ingredients.id_ingredient INNER JOIN mesures on mesures.id=recettes_ingredients.id_mesures WHERE Id_recette =" . $id_recette;
 $tags_query = "SELECT * FROM recettes_tags INNER JOIN tags on tags.id=recettes_tags.id_tag WHERE Id_recette =" . $id_recette;
 $ustensiles_query = "SELECT * FROM recettes_ustensiles INNER JOIN ustensiles on ustensiles.id=recettes_ustensiles.id_ustensile WHERE Id_recette =" . $id_recette;
 $miniature_query = "SELECT * FROM `recettes_images` WHERE id_recette =" . $id_recette;
