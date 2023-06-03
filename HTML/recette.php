@@ -101,8 +101,8 @@
                 </div>
                 <div class="p1">
                     /*modifie ici !!!!!!!!!!!*/
-                    <p>Temps de préparation: <span class="para">40 min</span></p>
-                    <p>Quantité prévue: <span class="para">2 personne(s)</span></p>
+                    <p>Temps de préparation : <span class="para"></span></p>
+                    <p>Prix : <span class="para"></span></p>
                 </div>
                 <div class="tag">
                     <?php foreach ($tags as $row): ?>
