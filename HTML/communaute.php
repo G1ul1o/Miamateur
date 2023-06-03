@@ -76,6 +76,7 @@
             </div>
             <div class="container" id="container"">
         </div>
+    <div class="rectangle-footer"></div>
     </main>
     <footer class="show-footer">
         <div id="lefooter">
