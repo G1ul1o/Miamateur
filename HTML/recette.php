@@ -28,6 +28,7 @@
     <title>Miamateur: Plat</title>
     <script src="../JS/index.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/Recette.js"></script>
     <link rel="stylesheet" href="../CSS/recette.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
@@ -98,6 +99,11 @@
                     <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
                     <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
                 </div>
+                <div class="p1">
+                    /*modifie ici !!!!!!!!!!!*/
+                    <p>Temps de préparation: <span class="para">40 min</span></p>
+                    <p>Quantité prévue: <span class="para">2 personne(s)</span></p>
+                </div>
                 <div class="tag">
                     <?php foreach ($tags as $row): ?>
                         <span class="tag">#<?php echo $row['nom']; ?></span>
@@ -113,21 +119,25 @@
         </div>
 
         <div class="élément">
-            <h3>Ingrédients</h3>
-            <div class="ingrédients">
+            <div class="menu">
+                <button class="menu-btn" onclick="toggleMenu('ingredients')">Ingrédient</button>
+                <div class="menu-content ingredients">
                 <ul>
                     <?php foreach ($ingredients as $row): ?>
                         <li><?php echo $row['quantite'] . ' ' . $row['nom']; ?></li>
                     <?php endforeach; ?>
                 </ul>
+                </div>
             </div>
-            <h3>Matériel</h3>
-            <div class="Ustensiles">
+            <div class="menu">
+                <button class="menu-btn" onclick="toggleMenu('ustensiles')">Ustensiles</button>
+                <div class="menu-content ustensiles">
                 <ul>
                     <?php foreach ($ustensiles as $row): ?>
                             <li><?php echo $row['nom']; ?></li>
                     <?php endforeach; ?>
                 </ul>
+                </div>
             </div>
         </div>
 
