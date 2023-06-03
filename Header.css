@@ -1,4 +1,7 @@
-/*création du block header*/
+
+/*
+HEADER
+*/
 header {
     position: fixed;
     align-items: center;
@@ -7,11 +10,13 @@ header {
     width: 100%;
     left : 0;
     background: white;
+    z-index: 999;
+    padding: 10px 0;
 }
 
 
 /*sert a placer des choses dedans*/
-.container {
+.Header-Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +40,10 @@ header {
     border-radius: 50px;
     border: 1px solid rgb(241, 238, 237);
     transition: all 0.4s ease 0s;
+
 }
+
+
 
 /*barre de recherche*/
 .input {
@@ -45,12 +53,37 @@ header {
     font-size: 18px;
     border: 10px solid rgb(255, 255, 255);
     border-radius: 50px;
+    outline: none;
+
+
 }
 
+#suggestions-container {
+    position: absolute;
+    top: 7.8vh;
+    margin-left: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
 
 
+}
 
+.suggestion {
+    padding: 8px;
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
 
+}
+
+.suggestion:hover {
+    background-color: #f2f2f2;
+}
 
 
 /*pour centrer le bouton de recherche au millieu de la barre de recherche*/
@@ -104,32 +137,22 @@ input:-ms-input-placeholder {
     width: 100%;
 }
 
-
-/*jsp a quoi ça sert mais quand je l'enlève ça fait un truc bizarre. Ça a un liens avec l'ancien bouton de navigation*/
-.scrolable{
-    display : none;
-    overflow: scroll;
-    width: 80%;
-    left : 60px;
-
-}
-
 /*bouton profile*/
 .button-profile {
     display: inline-block;
-    padding: 3px 5px;
     border-radius: 15px;
     background: linear-gradient(to right, #93c47d, #76a5af);
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
     transition: all 0.3s ease;
     border: 1px solid rgb(241, 238, 237);
+    padding: 4px;
+    margin-left: 10%;
+    margin-right: 2%;
 }
-
-
 
 /*les boutons du header (Acceuil, tendance commmunautaires...)*/
 .header-button {
@@ -137,7 +160,6 @@ input:-ms-input-placeholder {
     color : #808080;
     text-decoration:none;
     border-width : 10px;
-    width: 2%;
 }
 
 /*animation quand on passe la souris sur les boutons du header*/
@@ -164,35 +186,33 @@ input:-ms-input-placeholder {
 /*fait en sorte que le header-button du nom de la page sur laquelle on est soit de couleur verrte et pas grise*/
 .active {
     color : #93c47d;
-    font-family: "Arial", sans-serif;
-    text-decoration:none;
-    border-width : 10px;
-    width: 2%;
+}
+.logo{
+    width : 80px;
+    height : 80px;
 }
 
-/*pour ajouter un petit blanc en bas du header*/
-.blanc{
-    height: 10px;
-}
-
-
-
-/*caractéristique du body pour le décaler*/
-body{
-    margin-top: 10% ;
+main{
+    margin-top: 175px;
 }
 
 
-
-/*les infos du footer*/
-footer{
-    align-items: center;
+/*
+FOOTER
+*/
+footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
-    left : 0;
-    position: fixed;
     background-color: #93c47d;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    left: 0;
+}
+
+footer.show {
+    opacity: 1;
 }
 
 #lefooter {
@@ -261,12 +281,7 @@ footer h2 {
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
+main {
+    flex-grow: 1;
+    padding-bottom: 300px;
+}

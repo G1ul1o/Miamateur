@@ -1,178 +1,9 @@
+
 /*
-FOOTER
-*/
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #93c47d;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    left: 0;
-}
-
-footer.show {
-    opacity: 1;
-}
-
-#lefooter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer li{
-    display: inline-block;
-    font-family: "Arial", sans-serif;
-    color : #93c47d;
-}
-
-.lien_footer{
-    text-decoration: none;
-    color: white;
-    font-family: "Arial", sans-serif;
-    margin-right: 20px;
-    margin-left: 20px;
-}
+    BODY
+ */
 
 
-.lien_footer_reseau{
-    text-decoration: none;
-    color: white;
-    font-family: "Arial", sans-serif;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.lien_footer:hover{
-    color: black;
-    transition: all 0.4s ease 0s;
-}
-
-footer img{
-    width: 50px;
-}
-
-.items_social{
-
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    flex-direction: column;
-
-}
-
-#social_media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-#boutons-cliquables{
-    flex-direction: row;
-    padding: 0px;
-}
-
-footer h2 {
-    text-decoration: none;
-    color: white;
-    font-family: "Arial", sans-serif;
-    margin: 0;
-}
-
-main {
-    flex-grow: 1;
-    padding-bottom: 300px;
-}
-/*
-HEADER
-*/
-header {
-    position: fixed;
-    align-items: center;
-    top: 0;
-    box-shadow: 10px 0 20px 0 rgba(0,0,0,0.5);
-    width: 100%;
-    left : 0;
-    background: white;
-    z-index: 999;
-    padding: 10px 0;
-}
-
-
-/*sert a placer des choses dedans*/
-.Header-Container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*le bouton du menu Miamateur en haut Ã  gauche du header*/
-.button-title {
-    font-family: "Arial", sans-serif;
-    color : #93c47d;
-    margin-left: 15%;
-    display: inline-block;
-    border-radius: 15px;
-    font-size: 30px;
-}
-
-
-/*contour de la barre de recherche*/
-.input-wrapper {
-    display: flex;
-    flex: 1;
-    border-radius: 50px;
-    border: 1px solid rgb(241, 238, 237);
-    transition: all 0.4s ease 0s;
-
-}
-
-
-
-/*barre de recherche*/
-.input {
-    overflow: hidden;
-    display: flex;
-    width:100%;
-    font-size: 18px;
-    border: 10px solid rgb(255, 255, 255);
-    border-radius: 50px;
-    outline: none;
-
-
-}
-
-#suggestions-container {
-    position: absolute;
-    top: 7.8vh;
-    margin-left: 0;
-    background-color: #fff;
-    border-radius: 20px;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-
-
-}
-.suggestion {
-    padding: 8px;
-    cursor: pointer;
-    font-family: "Arial", sans-serif;
-
-}
-
-.suggestion:hover {
-    background-color: #f2f2f2;
-}
-
-
-/*pour centrer le bouton de recherche au millieu de la barre de recherche*/
 input::-webkit-input-placeholder {
     text-align: center;
 }
@@ -189,94 +20,302 @@ input:-ms-input-placeholder {
     text-align: center;
 }
 
-/*bouton de recherche Ã  droite de la barre de recherche*/
-.search-button {
+.introduction {
+    position: static;
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #f2f2f2;
-    border: none;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-
-/*animation quand on passe la souris sur le bouton de recherche*/
-.search-button:hover {
-    background-color: #ddd;
-}
-/*icone du bouton de recherche. Il faut le faire en CSS et pas en HTML*/
-.search-icon {
+.presentation {
+    width: 35%;
+    height: 35%;
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-icons-png.flaticon.com/512/116/116836.png%22");
-    background-size: cover;
-    background-position: center;
+    margin :2%;
 }
-
-.input.clicked button {
+/*
+.allimg {
     width: 100%;
-    }
-
-    /*bouton profile*/
-    .button-profile {
-    display: inline-block;
+    object-fit: fill;
+    margin-bottom:5%;
     border-radius: 15px;
-    background: linear-gradient(to right, #93c47d, #76a5af);
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: "Arial", sans-serif;
-    transition: all 0.3s ease;
-    border: 1px solid rgb(241, 238, 237);
-    padding: 4px;
-    margin-left: 10%;
-    margin-right: 2%;
+
+}*/
+.allimg {
+    transition: transform 0.3s ease;
+    width: 100%;
+    object-fit: fill;
+    margin-bottom:5%;
+    border-radius: 15px;
 }
 
-/*les boutons du header (Acceuil, tendance commmunautaires...)*/
-.header-button {
-    font-family: "Arial", sans-serif;
-    color : #808080;
-    text-decoration:none;
-    border-width : 10px;
+.allimg:hover {
+    transform: scale(1.05);
 }
 
-/*animation quand on passe la souris sur les boutons du header*/
-.header-button:hover {
-    transition: all 0.2s ease 0s;
-    color: #93c47d;
+.allimg.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*pour l'alignement des boutons du header*/
-.alignement_cote {
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    transition: all 0.4s ease 0s;
+.allimg.active:hover {
+    transform: scale(1);
 }
 
-.alignement {
-    width: 90%;
-    margin: auto;
-    text-align: center;
+/*
+.img2 {
     display: flex;
-    justify-content: space-between;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}*/
+
+.img2 {
+    transition: transform 0.3s ease;
+    display: flex;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-/*fait en sorte que le header-button du nom de la page sur laquelle on est soit de couleur verrte et pas grise*/
-.active {
-    color : #93c47d;
-}
-.logo{
-    width : 80px;
-    height : 80px;
+.img2:hover {
+    transform: scale(1.05);
 }
 
-main{
-    margin-top: 175px;
+.img2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
+.img2.active:hover {
+    transform: scale(1);
+}
+
+
+.miniatures
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap:5%;
+}
+
+.paragraphe{
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+}
+.titre {
+    font-size: 140%;
+    color : #bed08c;
+    /* Ajout de la largeur de 20% */
+}
+
+.p1 {
+    display: flex;
+    gap: 25%;
+    font-style: normal;
+    font-size: 150%;
+}
+.para
+{
+    display: inline-block;
+    color: #bed08c;
+}
+
+
+.parametre{
+    background-color: #F4F6EDFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.parametre h2 {
+    font-weight: normal;
+    font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
+    border: 3px solid #bed08c;
+    border-radius: 25px;
+    padding:1%;
+    margin:0 /*marge entre haut et en bas de l'encadrement (0) et sur les cotÃ©s (auto)*/
+}
+
+
+.description
+{
+    display: inline-block;
+    font-size:140%;
+    margin-bottom: 5%;
+    padding: 1%;
+}
+
+.Ã©lÃ©ment {
+    width: 25%;
+    margin-left: 2%;
+    position : static;
+}
+.Ã©lÃ©ment h3
+{
+    font-weight: normal;
+    font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
+    border: 3px solid #bed08c;
+    border-radius: 25px;
+    padding:1%;
+    margin:0 /*marge entre haut et en bas de l'encadrement (0) et sur les cotÃ©s (auto)*/
+}
+
+
+
+
+
+.ingrÃ©dients ul {
+    list-style-type: none; /* Supprime les puces par dÃ©faut */
+    padding-left: 0; /* Supprime le padding Ã  gauche pour les listes */
+}
+
+.ingrÃ©dients li::before {
+    content: "-"; /* Ajoute un tiret devant chaque Ã©lÃ©ment */
+    font-weight: bold; /* Met en gras le tiret */
+    margin-right: 0.5em; /* Ajoute une marge Ã  droite du tiret */
+}
+
+.Ustensiles ul {
+    list-style-type: none; /* Supprime les puces par dÃ©faut */
+    padding-left: 0; /* Supprime le padding Ã  gauche pour les listes */
+}
+.Ustensiles li::before {
+    content: "- "; /* Ajoute un tiret devant chaque Ã©lÃ©ment */
+    font-weight: bold; /* Met en gras le tiret */
+    margin-right: 0.5em; /* Ajoute une marge Ã  droite du tiret */
+}
+
+
+.Recette{
+    background-color: #F4F6EDFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.Recette dl {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left:2%;
+    width: 90%;
+    background-color: #F4F6EDFF;
+}
+.Recette dt {
+    font-size:100%;
+    list-style-type: none;
+    font-weight: bold;
+    color: #bed08c;
+}
+
+.Recette ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+    margin-left: 0.5%;
+}
+
+.Recette li {
+    list-style-type: none;
+    margin-top: 0.5em;
+    margin-left: 0.5%;
+}
+
+.Recette h3 {
+    margin-top: 0;
+    margin-left: 0.5%;
+    font-style: normal;
+    font-size: 120%;
+}
+
+.Recette p {
+    margin-top: 0;
+    margin-left: 0.5%;
+    font-style: normal;
+    font-size: 110%;
+}
+
+
+body{
+    font-family: Arial;
+    padding: 5%;
+}
+
+
+
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+
+
+.menu {
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.menu-btn {
+    background-color: #bed08c;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 15px;
+    font-size:150%;
+    list-style-type: none;
+    font-weight: bold;
+    color: white;
+}
+
+.menu-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.menu-content.show {
+    display: block;
+}
+
+
+
