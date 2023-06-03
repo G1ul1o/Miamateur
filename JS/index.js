@@ -1,5 +1,6 @@
 const searchBar = document.getElementById('searchBar');
 const suggestionsContainer = document.getElementById('suggestions-container');
+const searchButton = document.getElementById('searchButton');
 
 searchBar.addEventListener('input', () => {
     const searchString = searchBar.value;
@@ -22,7 +23,7 @@ searchBar.addEventListener('input', () => {
             });
         }
     };
-    xhr.open('GET', 'PHP/autocomplete.php?q=' + searchString, true);
+    xhr.open('GET', '../PHP/autocomplete.php?q=' + searchString, true);
     xhr.send();
 });
 
@@ -32,47 +33,20 @@ document.addEventListener('click', (event) => {
     }
 });
 
-const searchButton = document.getElementById('searchButton');
-searchButton.addEventListener('click', () => {
-    const searchString = searchBar.value;
+
+// Attendre que le contenu de la page soit chargé
+window.addEventListener("scroll", function() {
+    var footer = document.querySelector("footer");
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var bodyHeight = document.body.offsetHeight;
+
+    if (scrollPosition + windowHeight >= bodyHeight) {
+        footer.style.opacity = "1";
+        footer.style.visibility = "visible";
+    } else {
+        footer.style.opacity = "0";
+        footer.style.visibility = "hidden";
+    }
 });
 
-
-
-// code page recette !!!!
-//le code pour le zoom sur les photos de la page recette
-const images = document.querySelectorAll('img');
-
-images.forEach(image => {
-    // Ajoute un écouteur d'événement de clic
-    image.addEventListener('click', () => {
-        // Crée un élément de superposition pour afficher l'image en premier plan
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-
-        // Crée un élément d'image agrandie
-        const enlargedImage = document.createElement('img');
-        enlargedImage.src = image.src;
-        enlargedImage.classList.add('enlarged-image');
-
-        // Aaoute l'image agrandie à la superposition
-        overlay.appendChild(enlargedImage);
-
-        // ajoute la superposition à la page
-        document.body.appendChild(overlay);
-
-        // regarde si l'utilisateur clic qq part pour fermer l'overlay
-        overlay.addEventListener('click', () => {
-            document.body.removeChild(overlay);
-        });
-    });
-});
-
-
-
-
-//le code pour les menus déroulants de la page recette
-function toggleMenu(menuName) {
-    const menuContent = document.querySelector(`.menu-content.${menuName}`);
-    menuContent.classList.toggle('show');
-}

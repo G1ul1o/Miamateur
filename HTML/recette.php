@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <title>Miamateur: Plat</title>
     <script src="../JS/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../CSS/recette.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
@@ -39,7 +40,7 @@
 
         <!-- logo -->
         <a href="../index.php" >
-            <img src = "../image/image-removebg-preview.jpg" class="logo">
+            <img src = "../image/image-removebg-preview.jpg" class    ="logo">
         </a>
 
         <!-- titre -->
@@ -59,25 +60,25 @@
             <div id="suggestions-container"></div>
         </form>
         <!-- bouton compte -->
-        <a class="button-profile" href="../index.php">Mon compte</a>
+        <a class="button-profile" href="connexion.php">Mon compte</a>
     </div>
 
     <div class="alignement_cote">
         <div class="alignement">
             <!-- les boutons du header (Acceuil, notre selection...) -->
-            <a class="active header-button" href="../index.php" target="_blank">Accueil</a>
+            <a class="active header-button" href="../index.php" target="_self">Accueil</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Notre selection</a>
+            <a class="header-button" href="selection.php" target="_self">Notre selection</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Tendance communautaire</a>
+            <a class="header-button" href="communaute.php" target="_self">Tendance communautaire</a>
 
-            <a class="header-button" href="../index.php" target="_blank">A propos</a>
+            <a class="header-button" href="apropos.php" target="_self">A propos</a>
 
-            <a class="header-button" href="../index.php" target="_blank">Contact</a>
+            <a class="header-button" href="contact.php" target="_self">Contact</a>
         </div>
     </div>
 </header>
-    <main>
+<main>
         <div class="introduction">
             <div class="presentation">
                 <div class="photo">
@@ -145,11 +146,39 @@
                         $i++;
                         }
                     }
-
                     ?>
                 </ul>
             </dl>
         </div>
     </main>
+    <footer class="show-footer">
+        <div id="lefooter">
+            <ul id="boutons-cliquables">
+                <li><a href="#" class="lien_footer">Accueil</a></li>
+                <li><a href="#" class="lien_footer">À propos</a></li>
+                <li><a href="#" class="lien_footer">Contact</a></li>
+            </ul>
+            <br>
+            <h2>Nos Réseaux</h2>
+            <ul id="social_media">
+                <div class="items_social">
+                    <li><img  src = "../image/Instagram-logo.png" alt="insta" ></li>
+                    <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "../image/facebook-logo.png" alt="facebook"> </li>
+                    <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img src = "../image/pinterest-logo.png" alt="pinterest"> </li>
+                    <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+                </div>
+                <div class="items_social">
+                    <li><img  src = "../image/twitter-logo.png" alt="twitter" > </li>
+                    <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+                </div>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
