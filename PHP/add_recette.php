@@ -17,8 +17,11 @@ $prix = $_POST['prix'];
 $description = $_POST['description'];
 $ingredients = $_POST['ingredient'];
 $ustensils = $_POST['ustensil'];
-$tags = $_POST['tags'];
+//$tags = $_POST['tags'];
 $instructions = $_POST['instructions'];
+$quantites = $_POST['quantite'];
+
+
 
 try {
     // Commencer une transaction
@@ -50,8 +53,10 @@ try {
 
     // Insérer les ingrédients de la recette dans la table ingredients (s'ils n'existent pas déjà)
     $ingredientIds = [];
+
+    var_dump($ingredients);
     foreach ($ingredients as $ingredient) {
-        $ingredientName = $ingredient['nom'];
+        $ingredientName = $ingredient;
         $sql = "SELECT id FROM ingredients WHERE nom = :nom";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nom', $ingredientName);
@@ -71,8 +76,7 @@ try {
         $ingredientIds[] = $ingredientId;
 
         // Insérer les données dans la table recette_ingredient
-        $quantite = $ingredient['quantite'];
-        $sql = "INSERT INTO recette_ingredient (id_recette, id_ingredient, quantite) VALUES (:id_recette, :id_ingredient, :quantite)";
+        $sql = "INSERT INTO recettes_ingredients (id_recette, id_ingredient, quantite) VALUES (:id_recette, :id_ingredient, :quantite)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id_recette', $recetteId);
         $stmt->bindParam(':id_ingredient', $ingredientId);
@@ -81,7 +85,7 @@ try {
     }
 
     // Insérer les tags de la recette dans la table tags (s'ils n'existent pas déjà)
-    $tagIds = [];
+   /* $tagIds = [];
     foreach ($tags as $tagName) {
         $sql = "SELECT id FROM tags WHERE nom = :nom";
         $stmt = $conn->prepare($sql);
@@ -108,11 +112,12 @@ try {
         $stmt->bindParam(':id_tag', $tagId);
         $stmt->execute();
     }
+   */
 
     // Insérer les ustensiles de la recette dans la table ustensile (s'ils n'existent pas déjà)
     $ustensilIds = [];
     foreach ($ustensils as $ustensilName) {
-        $sql = "SELECT id FROM ustensile WHERE nom = :nom";
+        $sql = "SELECT id FROM ustensiles WHERE nom = :nom";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nom', $ustensilName);
         $stmt->execute();
@@ -121,7 +126,7 @@ try {
         if ($result) {
             $ustensilId = $result['id'];
         } else {
-            $sql = "INSERT INTO ustensile (nom) VALUES (:nom)";
+            $sql = "INSERT INTO ustensiles (nom) VALUES (:nom)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nom', $ustensilName);
             $stmt->execute();
@@ -131,7 +136,7 @@ try {
         $ustensilIds[] = $ustensilId;
 
         // Insérer les données dans la table recette_ustensiles
-        $sql = "INSERT INTO recette_ustensiles (id_recette, id_ustensile) VALUES (:id_recette, :id_ustensile)";
+        $sql = "INSERT INTO recettes_ustensiles (id_recette, id_ustensile) VALUES (:id_recette, :id_ustensile)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id_recette', $recetteId);
         $stmt->bindParam(':id_ustensile', $ustensilId);
