@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../CSS/selection.css">
     <link rel="stylesheet" href="../CSS/HEADER.css">
     <link rel="stylesheet" href="../CSS/FOOTER.css">
-    <script src="../JS/communaute.js" defer></script>
+    <script src="../JS/selection.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../JS/index.js" defer></script>
 

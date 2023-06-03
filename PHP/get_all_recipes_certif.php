@@ -25,3 +25,4 @@ $recettes_json = json_encode($recettes);
 
 echo $recettes_json;
 
+?>
