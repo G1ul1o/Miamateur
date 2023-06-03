@@ -17,7 +17,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
+#formulaire input[type="text"],
 textarea {
     width: 100%;
     padding: 8px;
@@ -26,7 +26,7 @@ textarea {
     border-radius: 4px;
 }
 
-input[type="text"]#tags {
+ input[type="text"]#tags {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
