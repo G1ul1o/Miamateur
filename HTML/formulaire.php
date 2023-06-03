@@ -103,13 +103,19 @@
                 <input type="number" id="quantite0" name="quantite"
                        min="1" max="2000">
 
-                <select name="mesures" id="mesure-select">
-                    <option value="2">--Choisir une mesure--
-                    </option>
-                    <option value="gramme">gramme</option>
-                    <option value="litre">litre</option>
-                    <option value="cuillere_a_cafe">cuillère à café</option>
-                    <option value="grande_cuillère">grande_cuillère</option>
+                <select name="mesures[]" id="mesure-select">
+                    <option value="">--Choisir une mesure--</option>
+                    <option value=""></option>
+                    <option value="pincée">pincée</option>
+                    <option value="g">gramme</option>
+                    <option value="kg">kilo</option>
+                    <option value="cL">centi Litre</option>
+                    <option value="L">litre</option>
+                    <option value="verre">verre</option>
+                    <option value="c.à.c">cuillère à café</option>
+                    <option value="c.à.s">cuillère à soupe</option>
+                    <option value="filet">fillet</option>
+                    <option value="feuille">feuille</option>
 
                 </select>
 
