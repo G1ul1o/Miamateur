@@ -117,7 +117,8 @@ input:-ms-input-placeholder {
 .paragraphe{
     display: inline-block;
     vertical-align: top;
-    width: 60%;
+    width: 55%;
+    margin-left: 5%;
 }
 .titre {
     font-size: 140%;
