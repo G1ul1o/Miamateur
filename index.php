@@ -2,11 +2,11 @@
     include 'PHP/connection.php';
 
     // Première requête pour la sélection
-    $sql_selection = 'SELECT * FROM recettes ORDER BY RAND() LIMIT 3';
+    $sql_selection = 'SELECT * FROM recettes WHERE certification = 1 ORDER BY RAND() LIMIT 3';
     $result_selection = $conn->query($sql_selection);
 
     // Deuxième requête pour les tendances communautaires
-    $sql_tendances = 'SELECT * FROM recettes ORDER BY RAND() LIMIT 3';
+    $sql_tendances = 'SELECT * FROM recettes WHERE certification = 1 ORDER BY RAND() LIMIT 3';
     $result_tendances = $conn->query($sql_tendances);
 ?>
 <!DOCTYPE html>
