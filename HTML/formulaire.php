@@ -132,7 +132,7 @@
         <br>
 
         <label for="instructions">instructions :</label>
-        <input type="text" id="instructions" name="instructions"><br><br>
+        <input type="text" id="instructions" name="instructions" placeholder="Modèle : Instruction1.Instruction2.Instruction3"><br><br>
 
         <div class="affirmation">
             <input class="boutton" type="submit" value="Ajouter la recette" onclick="generer()">

@@ -17,7 +17,7 @@ $prix = $_POST['prix'];
 $description = $_POST['description'];
 $ingredients = $_POST['ingredient'];
 $ustensils = $_POST['ustensil'];
-//$tags = $_POST['tags'];
+$tags = $_POST['tags'];
 $instructions = $_POST['instructions'];
 $quantites = $_POST['quantite'];
 
@@ -84,7 +84,8 @@ try {
     }
 
     // Insérer les tags de la recette dans la table tags (s'ils n'existent pas déjà)
-   /* $tagIds = [];
+    $tagIds = [];
+
     foreach ($tags as $tagName) {
         $sql = "SELECT id FROM tags WHERE nom = :nom";
         $stmt = $conn->prepare($sql);
@@ -94,24 +95,16 @@ try {
 
         if ($result) {
             $tagId = $result['id'];
-        } else {
-            $sql = "INSERT INTO tags (nom) VALUES (:nom)";
+            $tagIds[] = $tagId;
+
+            // Insérer les données dans la table recettes_tags
+            $sql = "INSERT INTO recettes_tags (id_recette, id_tag) VALUES (:id_recette, :id_tag)";
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':nom', $tagName);
+            $stmt->bindParam(':id_recette', $recetteId);
+            $stmt->bindParam(':id_tag', $tagId);
             $stmt->execute();
-            $tagId = $conn->lastInsertId();
         }
-
-        $tagIds[] = $tagId;
-
-        // Insérer les données dans la table recette_tag
-        $sql = "INSERT INTO recette_tag (id_recette, id_tag) VALUES (:id_recette, :id_tag)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':id_recette', $recetteId);
-        $stmt->bindParam(':id_tag', $tagId);
-        $stmt->execute();
     }
-   */
 
     // Insérer les ustensiles de la recette dans la table ustensile (s'ils n'existent pas déjà)
     $ustensilIds = [];

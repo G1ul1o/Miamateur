@@ -71,30 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const tagsContainer = document.getElementById('tags-container');
-    const boutonAjouterTag = document.getElementById('ajouter-tag');
-
-    // Ajouter un tag
-    boutonAjouterTag.addEventListener('click', function() {
-        const nouveauTag = document.createElement('div');
-        nouveauTag.className = 'tag';
-        nouveauTag.innerHTML = `
-            <input type="text" id="tags[]" name="tags[]" placeholder="tags ${tagsContainer.childElementCount + 1}">
-            <button type="button" class="supprimer-tag">Supprimer</button>
-        `;
-        tagsContainer.appendChild(nouveauTag);
-        nb_tag++;
-    });
-
-    // Supprimer un tag
-    tagsContainer.addEventListener('click', function(e) {
-        if (e.target.classList.contains('supprimer-tag')) {
-            e.target.parentElement.remove();
-            nb_tag--;
-        }
-    });
-});
 
 function generer()
 {
@@ -277,38 +253,55 @@ function generer()
 window.onload = function() {
     var page = document.getElementById("tags-container");
 
-    var indice = 0;
+    // Requête AJAX pour récupérer les tags depuis la base de données
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "../PHP/get_tags.php", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var tags = JSON.parse(xhr.responseText);
 
-    var nb_tag = 5; /*requete serveur*/
+            var indice = 0;
+            var nb_tag = tags.length;
 
-    for (var i = 0; i < nb_tag; i++) {
-        if (indice === 0) {
-            var ul = document.createElement("ul");
+            for (var i = 0; i< nb_tag; i++)
+            {
+                if (indice === 0)
+                {
+                    var ul = document.createElement("ul");
+
+                }
+                var li = document.createElement("li");
+
+                // Création de la chexbox
+                var checkbox = document.createElement('input');
+                checkbox.type = "checkbox";
+                checkbox.id = "tag_" + tags[i].id;
+                checkbox.name = "tags[]";
+                checkbox.value = tags[i].nom;
+
+                // Création de l'élément label associé à la checkbox
+                var label = document.createElement("label");
+                label.htmlFor = "tag_" + tags[i].id;
+                label.textContent = tags[i].nom;
+
+                li.appendChild(checkbox);
+                li.appendChild(label);
+
+                ul.appendChild(li);
+
+                indice++
+
+                if (indice === 5)
+                {
+                    page.appendChild(ul);
+                    indice=0;
+                }
+
+            }
+            if (indice > 0) {
+                page.appendChild(ul);
+            }
         }
-        var li = document.createElement("li");
-
-        // Création de la chexbox
-        var checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = "tag";
-        checkbox.name = "tag"; /*nom du tag requête serveur */
-        checkbox.value = "Ta";
-
-        // Création de l'élément label associé à la checkbox
-        var label = document.createElement("label");
-        label.htmlFor = "tag"; /* pour lier le label avec le checkbox*/
-        label.textContent = "Végétarien"; /*nom du tag requête serveur */
-
-        li.appendChild(checkbox);
-        li.appendChild(label);
-
-        ul.appendChild(li);
-
-        indice++;
-
-        if (indice === 5) {
-            page.appendChild(ul);
-            indice = 0;
-        }
-    }
+    };
+    xhr.send();
 };
