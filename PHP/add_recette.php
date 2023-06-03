@@ -44,7 +44,7 @@ try {
     // Insérer les images de la recette dans la table recettes_images
     $sql = "INSERT INTO recettes_images (id_recette, image_url) VALUES (:id_recette, :image_url)";
     $stmt = $conn->prepare($sql);
-    $images = [$photo, $miniature1, $miniature2, $miniature3];
+    $images = [$miniature1, $miniature2, $miniature3];
     foreach ($images as $image) {
         $stmt->bindParam(':id_recette', $recetteId);
         $stmt->bindParam(':image_url', $image);
@@ -54,7 +54,6 @@ try {
     // Insérer les ingrédients de la recette dans la table ingredients (s'ils n'existent pas déjà)
     $ingredientIds = [];
 
-    var_dump($ingredients);
     foreach ($ingredients as $ingredient) {
         $ingredientName = $ingredient;
         $sql = "SELECT id FROM ingredients WHERE nom = :nom";
@@ -149,6 +148,7 @@ try {
     // Redirection vers la page de succès
     header('Location: ../index.php');
     exit();
+
 } catch (PDOException $e) {
     // Annuler la transaction en cas d'erreur
     $conn->rollBack();
