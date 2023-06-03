@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="SEARCH BAR ON">
-      <change afterPath="$PROJECT_DIR$/CSS/FOOTER.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS/HEADER.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/recette.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocomplete.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/autocomplete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fill.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/fill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formulaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/formulaire.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/formulaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/recette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recette.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +77,7 @@
       <workItem from="1683097770598" duration="10997000" />
       <workItem from="1684418401944" duration="425000" />
       <workItem from="1684766104919" duration="3746000" />
+      <workItem from="1685798143368" duration="355000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -147,7 +132,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Header-Footer" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
