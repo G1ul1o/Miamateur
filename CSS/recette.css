@@ -1,4 +1,3 @@
-
 /*
     BODY
  */
@@ -30,21 +29,82 @@ input:-ms-input-placeholder {
     display: inline-block;
     margin :2%;
 }
-
+/*
 .allimg {
     width: 100%;
     object-fit: fill;
     margin-bottom:5%;
+    border-radius: 15px;
 
+}*/
+.allimg {
+    transition: transform 0.3s ease;
+    width: 100%;
+    object-fit: fill;
+    margin-bottom:5%;
+    border-radius: 15px;
 }
 
+.allimg:hover {
+    transform: scale(1.05);
+}
 
+.allimg.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.allimg.active:hover {
+    transform: scale(1);
+}
+
+/*
 .img2 {
     display: flex;
     width: 170px;
     height: 170px;
     object-fit: cover;
+    border-radius: 15px;
+
+}*/
+
+.img2 {
+    transition: transform 0.3s ease;
+    display: flex;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
 }
+
+.img2:hover {
+    transform: scale(1.05);
+}
+
+.img2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img2.active:hover {
+    transform: scale(1);
+}
+
+
 .miniatures
 {
     display: flex;
@@ -56,7 +116,8 @@ input:-ms-input-placeholder {
 .paragraphe{
     display: inline-block;
     vertical-align: top;
-    width: 60%;
+    width: 55%;
+    margin-left: 5%;
 }
 .titre {
     font-size: 140%;
@@ -76,6 +137,15 @@ input:-ms-input-placeholder {
     color: #bed08c;
 }
 
+
+.parametre{
+    background-color: #F4F6EDFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 .parametre h2 {
     font-weight: normal;
     font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
@@ -89,47 +159,19 @@ input:-ms-input-placeholder {
 .description
 {
     display: inline-block;
-    font-size:140%;
+    font-size:120%;
     margin-bottom: 5%;
+    padding: 1%;
 }
 
-.élément {
-    width: 25%;
-    margin-left: 2%;
-    position : static;
-}
-.élément h3
-{
-    font-weight: normal;
-    font-size: 200%; /* ou une autre valeur de votre choix pour agrandir le titre */
-    border: 3px solid #bed08c;
-    border-radius: 25px;
-    padding:1%;
-    margin:0 /*marge entre haut et en bas de l'encadrement (0) et sur les cotés (auto)*/
-}
-.ingrédients ul {
-    list-style-type: none; /* Supprime les puces par défaut */
-    padding-left: 0; /* Supprime le padding à gauche pour les listes */
-    font-size: 120%;
-}
 
-.ingrédients li::before {
-    content: "-"; /* Ajoute un tiret devant chaque élément */
-    font-weight: bold; /* Met en gras le tiret */
-    margin-right: 0.5em; /* Ajoute une marge à droite du tiret */
+.Recette{
+    background-color: #F4F6EDFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
-
-.Ustensiles ul {
-    list-style-type: none; /* Supprime les puces par défaut */
-    padding-left: 0; /* Supprime le padding à gauche pour les listes */
-    font-size: 120%;
-}
-.Ustensiles li::before {
-    content: "- "; /* Ajoute un tiret devant chaque élément */
-    font-weight: bold; /* Met en gras le tiret */
-    margin-right: 0.5em; /* Ajoute une marge à droite du tiret */
-}
-
 
 .Recette dl {
     list-style-type: none;
@@ -139,9 +181,10 @@ input:-ms-input-placeholder {
     background-color: #F4F6EDFF;
 }
 .Recette dt {
-    font-size:200%;
+    font-size:100%;
     list-style-type: none;
     font-weight: bold;
+    color: #bed08c;
 }
 
 .Recette ul {
@@ -169,4 +212,64 @@ input:-ms-input-placeholder {
     margin-left: 0.5%;
     font-style: normal;
     font-size: 110%;
+}
+
+
+body{
+    font-family: Arial;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+
+
+.menu {
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.menu-btn {
+    background-color: #bed08c;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 15px;
+    font-size:150%;
+    list-style-type: none;
+    font-weight: bold;
+    color: white;
+}
+
+.menu-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.menu-content.show {
+    display: block;
 }
