@@ -116,6 +116,7 @@ $miniature = $miniature_result->fetchAll();
                     <span class="tag">#<?php echo $row['nom']; ?></span>
                 <?php endforeach; ?>
             </div>
+            <br>
             <div class="parametre">
                 <h2>Description</h2>
                 <div class="description">

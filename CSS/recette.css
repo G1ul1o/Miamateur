@@ -273,3 +273,10 @@ body{
 .menu-content.show {
     display: block;
 }
+
+.tag span{
+    background-color: #76a5af;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5%;
+}
