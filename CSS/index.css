@@ -113,6 +113,7 @@ h1 {
     text-align: center;
 }
 
+//redéfinition des classes pour le responsive téléphone mobile
 @media  screen and (min-width: 1025px) {
     body {
         font-family: Arial, sans-serif;
