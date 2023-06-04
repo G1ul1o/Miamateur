@@ -65,20 +65,25 @@
 </header>
 
     <main>
+        
+        <!-- On génére l'image -->
         <div class="box">
 
             <img src="../image/photo_selection.jpeg">
 
         </div>
-
+        
+        <!-- Titre + paragraphe -->
         <div class = "section">
 
             <h2>Recettes sélectionné</h2>
 
         </div>
-
+        
+        <!-- cette classe permet de donner une taille à notre rectantgle -->
         <div class="conteneur">
-
+               
+            <!-- Permet de dessiner le rectangle -->
             <div class="rectangle">
 
                 <p>Cette page rassemble les recettes que notre équipe a validés.<br>
@@ -105,7 +110,7 @@
 
 
 
-
+            <!-- les images seront générés par un script JavaScript contenue dans selection.js -->
             <div class="container" id="container">
 
 
