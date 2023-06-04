@@ -68,7 +68,7 @@
         <div class="conteneur">
             <div class="rectangle">
                 <p>Cette page rassemble les meilleures recettes de la communauté.<br>
-                    Ici vous pourrez parcourir les recettes de la communauté à vos risques et périls.<br>
+                    Ici, vous pourrez parcourir les recettes de la communauté à vos risques et périls.<br>
                     Attention, aucune règle n'est imposée ici.</p>
             </div>
         </div>
@@ -76,8 +76,10 @@
             <div class = "section">
                 <h2>Les Recettes</h2>
             </div>
+            <!-- on ajoute les images avec un script JavaScript se trouvant dans index.js -->
             <div class="container" id="container"">
         </div>
+    <!-- on alloue l'espace pour le footer -->
     <div class="rectangle-footer"></div>
     </main>
     <footer class="show-footer">
