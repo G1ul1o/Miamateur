@@ -85,11 +85,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </header>
 <main>
+    <!--boutton inscription et connexion -->
 <div class="container">
     <a class="button " href="inscription.php">inscription</a>
     <a class="button child" href="connexion.php">connexion</a>
     <section>
         <br>
+        <!--information neccesaire a la connexion -->
         <div class="container-form">
             <?php if (isset($error_message)) { ?>
                 <p class="error"><?php echo $error_message; ?></p>
