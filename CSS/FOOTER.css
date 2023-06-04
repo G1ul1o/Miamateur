@@ -1,6 +1,8 @@
 /*
 FOOTER
 */
+
+/*définition des caratéritique communes du footer*/
 footer {
     position: fixed;
     bottom: 0;
@@ -12,22 +14,26 @@ footer {
     left: 0;
 }
 
+/*définition de l'opacité du footer*/
 footer.show {
     opacity: 1;
 }
 
+/*création du bloc qui v contenir tout les élements du footer*/
 #lefooter {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*définition des caractéritiques li du footer*/
 footer li{
     display: inline-block;
     font-family: "Arial", sans-serif;
     color : #93c47d;
 }
 
+/*définition des caractéristique des liens dans le footer pour qu'ils ne soient pas en bleu souligné*/
 .lien_footer{
     text-decoration: none;
     color: white;
@@ -36,7 +42,7 @@ footer li{
     margin-left: 20px;
 }
 
-
+/*définition des noms des réseaux sociaux du footer*/
 .lien_footer_reseau{
     text-decoration: none;
     color: white;
@@ -45,15 +51,18 @@ footer li{
     margin-left: 10%;
 }
 
+/*ajout d'un changement de couleur quand on passe la souris dessus pour que l'utilisateur comprenne que c'est cliquable*/
 .lien_footer:hover{
     color: black;
     transition: all 0.4s ease 0s;
 }
 
+/*définition de la taille des images*/
 footer img{
     width: 50px;
 }
 
+/*déinition des object qui contienne les réseaux sociaux pour les organiser*/
 .items_social{
 
     display: flex;
@@ -63,6 +72,7 @@ footer img{
 
 }
 
+/*déinition du bloc par réseaux social*/
 #social_media {
     display: flex;
     justify-content: center;
@@ -70,11 +80,13 @@ footer img{
     padding: 0;
 }
 
+/*déinition des boutons cliquables*/
 #boutons-cliquables{
     flex-direction: row;
     padding: 0px;
 }
 
+/*définition des caractéristiques des titre h2 du footer*/
 footer h2 {
     text-decoration: none;
     color: white;
@@ -82,6 +94,7 @@ footer h2 {
     margin: 0;
 }
 
+/*enfin ajout d'un espace en bas de la page pour contenir le footer*/
 main {
     flex-grow: 1;
     padding-bottom: 300px;

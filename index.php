@@ -54,7 +54,7 @@
 
         <div class="alignement_cote">
             <div class="alignement">
-                <!-- les boutons du header (Acceuil, notre selection...) -->
+                <!-- les boutons du header (Acceuil, notre selection...) avec la classe header-bouton pour y faire des modification-->
                 <a class="active header-button" href="index.php" target="_self">Accueil</a>
 
                 <a class="header-button" href="/HTML/selection.php" target="_self">Notre selection</a>
