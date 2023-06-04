@@ -53,3 +53,62 @@ caption {
 .img-table{
     width: 50px;
 }
+
+@media all and (max-device-width: 600px)
+{
+    .apropos {
+        font-family: "Arial", sans-serif;
+        color : #696969;
+        text-decoration:none;
+    }
+
+
+    .table-container {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 99%;
+        margin-left: 1%;
+    }
+
+
+    body tbody tr:nth-child(odd){
+        background-color: #DCDCDC;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        font-size: 32px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Arial", sans-serif;
+        color : #696969;
+        text-decoration:none;
+    }
+
+    .nos-contacts {
+        font-family: "Arial", sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 40px;
+    }
+
+
+    caption {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        background-color: #93c47d;
+    }
+
+
+    .img-table{
+        width: 50px;
+    }
+}

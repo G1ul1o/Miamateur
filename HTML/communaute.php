@@ -57,9 +57,11 @@
     </div>
 </header>
 <main>
+    <!-- On implémente l'image -->
         <div class="box">
             <img src="../image/comu-img.jpeg">
         </div>
+    <!-- Titre + paragraphe -->
         <div class = "section">
             <h2>Recettes de la communauté</h2>
         </div>
@@ -76,6 +78,7 @@
             </div>
             <div class="container" id="container"">
         </div>
+    <div class="rectangle-footer"></div>
     </main>
     <footer class="show-footer">
         <div id="lefooter">

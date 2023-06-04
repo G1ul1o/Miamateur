@@ -34,19 +34,53 @@ document.addEventListener('click', (event) => {
 });
 
 
-// Attendre que le contenu de la page soit chargé
-window.addEventListener("scroll", function() {
+if (/Mobi/.test(navigator.userAgent))
+{
     var footer = document.querySelector("footer");
-    var scrollPosition = window.scrollY;
-    var windowHeight = window.innerHeight;
     var bodyHeight = document.body.offsetHeight;
+    var windowHeight = window.innerHeight;
 
-    if (scrollPosition + windowHeight >= bodyHeight) {
+
+    if (bodyHeight<=windowHeight)
+    {
         footer.style.opacity = "1";
         footer.style.visibility = "visible";
-    } else {
-        footer.style.opacity = "0";
-        footer.style.visibility = "hidden";
     }
-});
+    else
+    {
+        window.addEventListener("touchmove", function() {
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
+            if (scrollPosition + windowHeight >= bodyHeight) {
+                footer.style.opacity = "1";
+                footer.style.visibility = "visible";
+            } else {
+                footer.style.opacity = "0";
+                footer.style.visibility = "hidden";
+            }
+        });
+    }
+
+}
+else
+{
+    // Code exécuté pour les appareils non mobiles (ordinateurs, tablettes, etc.)
+    window.addEventListener("scroll", function() {
+
+
+        var footer = document.querySelector("footer");
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var bodyHeight = document.body.offsetHeight;
+
+        if (scrollPosition + windowHeight >= bodyHeight) {
+            footer.style.opacity = "1";
+            footer.style.visibility = "visible";
+        } else {
+            footer.style.opacity = "0";
+            footer.style.visibility = "hidden";
+        }
+    });
+
+}
+// Attendre que le contenu de la page soit chargé

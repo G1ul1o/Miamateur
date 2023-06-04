@@ -20,8 +20,7 @@ $ustensils = $_POST['ustensil'];
 $tags = $_POST['tags'];
 $instructions = $_POST['instructions'];
 $quantites = $_POST['quantite'];
-
-
+$mesures = $_POST['mesure'];
 
 try {
     // Commencer une transaction
@@ -53,9 +52,14 @@ try {
 
     // Insérer les ingrédients de la recette dans la table ingredients (s'ils n'existent pas déjà)
     $ingredientIds = [];
+    $mesureIds = [];
 
-    foreach ($ingredients as $ingredient) {
+    foreach ($ingredients as $index => $ingredient) {
         $ingredientName = $ingredient;
+        $mesure = $mesures[$index];
+        $quantite = $quantites[$index];
+
+        // Vérifier si l'ingrédient existe déjà
         $sql = "SELECT id FROM ingredients WHERE nom = :nom";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nom', $ingredientName);
@@ -65,6 +69,7 @@ try {
         if ($result) {
             $ingredientId = $result['id'];
         } else {
+            // Insérer l'ingrédient dans la table ingredients
             $sql = "INSERT INTO ingredients (nom) VALUES (:nom)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':nom', $ingredientName);
@@ -74,13 +79,35 @@ try {
 
         $ingredientIds[] = $ingredientId;
 
-        // Insérer les données dans la table recette_ingredient
-        $sql = "INSERT INTO recettes_ingredients (id_recette, id_ingredient, quantite) VALUES (:id_recette, :id_ingredient, :quantite)";
+        // Vérifier si la mesure existe déjà
+        $sql = "SELECT id FROM mesures WHERE unite = :unite";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':unite', $mesure);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result) {
+            $mesureId = $result['id'];
+        } else {
+            // Insérer la mesure dans la table mesures
+            $sql = "INSERT INTO mesures (unite) VALUES (:unite)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':unite', $mesure);
+            $stmt->execute();
+            $mesureId = $conn->lastInsertId();
+        }
+
+        $mesureIds[] = $mesureId;
+
+        // Insérer les données dans la table recettes_ingredients
+        $sql = "INSERT INTO recettes_ingredients (id_recette, id_ingredient, id_mesures, quantite) VALUES (:id_recette, :id_ingredient, :id_mesures, :quantite)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id_recette', $recetteId);
         $stmt->bindParam(':id_ingredient', $ingredientId);
+        $stmt->bindParam(':id_mesures', $mesureIds[$index]); // Utiliser $mesureIds[$index] ici
         $stmt->bindParam(':quantite', $quantite);
         $stmt->execute();
+
     }
 
     // Insérer les tags de la recette dans la table tags (s'ils n'existent pas déjà)
