@@ -33,7 +33,7 @@ document.addEventListener('click', (event) => {
     }
 });
 
-
+/* code qui génére le footer en fonction de l'appareil */
 if (/Mobi/.test(navigator.userAgent))
 {
     var footer = document.querySelector("footer");
