@@ -1,3 +1,4 @@
+/* voir commentaire de la fonction dans communaute.js */ 
 window.onload = function() {
     var page = document.getElementById("container");
     // Faire une requête AJAX pour récupérer les données des recettes depuis le serveur
