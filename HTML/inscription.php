@@ -74,11 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </header>
 <main>
+    <!-- bouton inscription et connexion-->
 <div class="container">
     <a class="button child" href="inscription.php">inscription</a>
     <a class="button" href="connexion.php">connexion</a>
     <section>
         <br>
+        <!-- information necessaire pour creer un compte-->
         <div class="container-form">
             <form method="post" action="inscription.php">
                 <fieldset>
