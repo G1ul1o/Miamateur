@@ -1,3 +1,4 @@
+/*cette fonction permet de générer la page dès que la page est lancé. Nous voulons 4 recettes par ligne donc nous allons insérer dans un élément ul 4 li */
 window.onload = function() {
     var page = document.getElementById("container");
     // Faire une requête AJAX pour récupérer les données des recettes depuis le serveur
@@ -10,12 +11,14 @@ window.onload = function() {
             var nbre_recette = recettes.length;
 
             var indice = 0;
-
+            /* on refait la même chose autant de fois qu'il y a de recettes */
             for (var i = 0; i < nbre_recette; i++) {
+                /* indice nous permettra de savoir si les 4 recettes on été ajouté */
                 if (indice === 0) {
+                    
                     var ul = document.createElement("ul");
                 }
-
+                 /*création des éléments composant notre ul */
                 var li = document.createElement("li");
 
                 var a = document.createElement("a");
@@ -39,13 +42,16 @@ window.onload = function() {
                 ul.appendChild(li);
 
                 indice++;
-
-                if (indice === 4) {
+                
+                /* On ajoute uniquement s'il y a 4 recettes qui ont été rajouté */
+                if (indice === 4) 
+                {
                     page.appendChild(ul);
                     indice = 0;
                 }
             }
-
+            
+            /*s'il y a plus de recettes mais qu'il y a pas 4 recettes ajouté on ajoute des éléments vide pour combler */
             if (indice !== 0) {
                 for (var j = indice; j < 4; j++) {
                     var li = document.createElement("li");
