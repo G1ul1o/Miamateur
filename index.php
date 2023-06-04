@@ -6,7 +6,7 @@
     $result_selection = $conn->query($sql_selection);
 
     // Deuxième requête pour les tendances communautaires
-    $sql_tendances = 'SELECT * FROM recettes WHERE certification = 1 ORDER BY RAND() LIMIT 3';
+    $sql_tendances = 'SELECT * FROM recettes WHERE certification IS NULL ORDER BY RAND() LIMIT 3';
     $result_tendances = $conn->query($sql_tendances);
 ?>
 <!DOCTYPE html>
