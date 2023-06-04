@@ -76,7 +76,7 @@
             <div class = "section">
                 <h2>Les Recettes</h2>
             </div>
-            <!-- on ajoute les images avec un script JavaScript se trouvant dans index.js -->
+            <!-- on ajoute les images avec un script JavaScript se trouvant dans selection.js -->
             <div class="container" id="container"">
         </div>
     <!-- on alloue l'espace pour le footer -->
