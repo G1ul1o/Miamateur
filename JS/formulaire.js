@@ -2,6 +2,7 @@ var nb_ingredients = 0;
 var nb_utensils = 0;
 var nb_tag = 0;
 
+//fonction qui permet d'ajouter des cases en cliquant sur les boutons "ajouter un ingrédient" ou bien "ajouter un ustensile"
 document.addEventListener('DOMContentLoaded', function() {
     const ingredientsContainer = document.getElementById('ingredients-container');
     const boutonAjouterIngredient = document.getElementById('ajouter-ingredient');
@@ -31,10 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       <input type="text" name="ingredient[]" placeholder="Ingredient ${ingredientsContainer.childElementCount + 1}">
         
-       <!--A envoyer -->    
       
-      
-      <!--Stop -->
       <button type="button" class="supprimer-ingredient">Supprimer</button>
     `;
 
@@ -96,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+//permet de vérifier que le formulaire est complet
 function generer()
 {
     var formulaire = document.forms.ajoutRecette;
@@ -110,13 +108,14 @@ function generer()
     var tags="";
 
 
-
+    //on récupère tout les checkbox
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     var Rempli = false;
     var limite4= checkboxes[checkboxes.length - 1];
 
     for (var i = 0; i < checkboxes.length; i++) {
-
+        
+        //on vérifie si le checkbox est rempli
         if (checkboxes[i].checked) {
 
             Rempli = true;
@@ -129,7 +128,8 @@ function generer()
     }
 
     tags = tags.replace(/\.(?=[^.]*$)/, ""); //retirer le dernier caractère qui est "." (?=[^.]*$ s'assure que c'est le dernier point
-
+    
+    //on récupère tout les ingrédients et leurs mesures
     var inputs = document.querySelectorAll('input[name="ingredient[]"]');
     var inputs_mesure = document.querySelectorAll('select[name="mesures[]"]');
 
@@ -146,8 +146,10 @@ function generer()
         {
             var indice_quantite=i+indice;
             console.log("quantite"+indice_quantite);
+            //on recupère la quantite portant l'id "quantite" + indice
             const quantiteInput = document.getElementById("quantite"+indice_quantite);
             console.log(quantiteInput);
+            //on vérifie que les valeurs soit bien rempli
             if (inputs[i].value!=="" && inputs_mesure[i].value!=="2" && quantiteInput.value!=="")
             {
                 if (inputs[i] === limite)
@@ -205,43 +207,8 @@ function generer()
     {
         Rempli=false;
     }
-
-    /*
-    var inputs3 = document.querySelectorAll('input[name="miniature[]"]');
-
-    if (inputs3[0].value!=="" && inputs3[1].value!=="" && inputs3[2].value!=="")
-    {
-        var limite3=inputs3[inputs3.length-1];
-
-        var n=1;
-
-        inputs3.forEach(function(input3)
-        {
-            if (n===1)
-            {
-                var miniature1=input3.value;
-                n++;
-            }
-
-            else if (n===2)
-            {
-                var miniature2=input3.value;
-                n++;
-            }
-
-            else if (n===3)
-            {
-                var miniature3=inputs3.value;
-                n++;
-            }
-        });
-    }
-
-    else
-    {
-        Rempli=false;
-    } */
-
+    
+    //on vérifie si les autres cases sont remplis
     if (Rempli===true && formulaire.elements["nom"].value!=="" && formulaire.elements["photo"].value!==""
         && formulaire.elements["temps"].value!=="" && formulaire.elements["portion"].value!=="" && formulaire.elements["description"].value!==""
         && formulaire.elements["prix"].value!=="" && formulaire.elements["temps_cuisson"].value!=="" && formulaire.elements["etapes"].value!=="")
@@ -274,7 +241,7 @@ function generer()
     }
 }
 
-
+//on génére les tags
 window.onload = function() {
     var page = document.getElementById("tags-container");
 
