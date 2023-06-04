@@ -82,17 +82,22 @@ $miniature = $miniature_result->fetchAll();
     </div>
 </header>
 <main>
+    <!--bloc de presentation de la recette -->
     <div class="introduction">
+        <!-- bloc qui regroupe les photos et les miniatures-->
         <div class="presentation">
+            <!--photo du plat -->
             <div class="photo">
                 <img class="allimg" src="<?php echo $recette['image_url']; ?>" alt="<?php echo $recette['nom']; ?>">
             </div>
+            <!--miniatures du plats -->
             <div class="miniatures">
                 <?php foreach ($miniature as $row): ?>
                     <img src="<?php echo $row['image_url']; ?>" alt="Image miniature" class="img2">
                 <?php endforeach; ?>
             </div>
         </div>
+        <!-- bloc d'information concernant la recette-->
         <div class="paragraphe">
             <div class="titre">
                 <h1><?php echo $recette['nom']; ?></h1>
@@ -101,25 +106,29 @@ $miniature = $miniature_result->fetchAll();
                 <p>Temps de préparation: <span class="para"><?php echo $recette['temps_preparation']; ?> min</span></p>
                 <p>Quantité prévue: <span class="para"><?php echo $recette['nb_portions']; ?> personne(s)</span></p>
             </div>
+            <!--temps de cuisson et la portion -->
             <div class="p1">
                 <p>Temps de cuisson : <span class="para"><?php echo $recette['temps_cuisson']; ?> min</span></p>
                 <p>Prix : <span class="para"><?php echo $recette['prix']; ?> €</span></p>
             </div>
+            <!--tag que possede le plat -->
             <div class="tag">
                 <?php foreach ($tags as $row): ?>
                     <span class="tag">#<?php echo $row['nom']; ?></span>
                 <?php endforeach; ?>
             </div>
             <br>
+            <!--parametre du plat -->
             <div class="parametre">
                 <h2>Description</h2>
+                <!--description du plat -->
                 <div class="description">
                     <p><?php echo $recette['description']; ?></p>
                 </div>
             </div>
         </div>
     </div>
-
+    <!--ingrédient -->
     <div class="élément">
         <div class="menu">
             <button class="menu-btn" onclick="toggleMenu('ingredients')">Ingrédient</button>
@@ -131,6 +140,7 @@ $miniature = $miniature_result->fetchAll();
                 </ul>
             </div>
         </div>
+        <!--unstensiles -->
         <div class="menu">
             <button class="menu-btn" onclick="toggleMenu('ustensiles')">Ustensiles</button>
             <div class="menu-content ustensiles">
@@ -142,6 +152,7 @@ $miniature = $miniature_result->fetchAll();
             </div>
         </div>
     </div>
+    <!--Recette avec des étapes -->
     <div class="Recette">
         <dl>
             <dt>Recette</dt>
