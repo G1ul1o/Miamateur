@@ -57,6 +57,7 @@
     </div>
 </header>
 <main>
+    <!--formulaire à remplir afin de creer une recette -->
     <h1>Ajouter une recette</h1>
 
     <form id="formulaire" action="../PHP/add_recette.php" method="POST">
@@ -94,7 +95,7 @@
 
         <label for="description">Description :</label><br>
         <textarea id="description" name="description" rows="4" cols="50" placeholder="Un délicieux poulet rôti"></textarea><br><br>
-
+        <!--ingredient nom plus quantite -->
         <div id="ingredients-container">
 
             <div class="ingredient">
@@ -127,6 +128,7 @@
         <button type="button" id="ajouter-ingredient">Ajouter un Ingrédient</button>
 
         <br><br>
+        <!--ustensil -->
         <label for="ustensils-container">Ustensil :</label>
         <div id="ustensils-container">
             <div class="ustensil">
@@ -139,7 +141,7 @@
 
         <label for="instructions">instructions :</label>
         <input type="text" id="instructions" name="instructions" placeholder="Modèle : Instruction1.Instruction2.Instruction3"><br><br>
-
+        <!--boutton de submit pour enregistrer la recette -->
         <div class="affirmation">
             <input class="boutton" type="submit" value="Ajouter la recette" onclick="generer()">
         </div>
