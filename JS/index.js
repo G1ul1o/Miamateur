@@ -11,7 +11,7 @@ searchBar.addEventListener('input', () => {
             const suggestions = JSON.parse(this.responseText);
 
             suggestionsContainer.innerHTML = '';
-            suggestions.forEach((suggestion) => {
+            suggestions.forEach((suggestion, index) => {
                 const suggestionElement = document.createElement('div');
                 suggestionElement.classList.add('suggestion');
                 suggestionElement.innerText = suggestion;
@@ -20,6 +20,31 @@ searchBar.addEventListener('input', () => {
                     suggestionsContainer.innerHTML = '';
                 });
                 suggestionsContainer.appendChild(suggestionElement);
+
+
+                /*navigation par boutons*/
+                suggestionElement.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowDown') {
+                        event.preventDefault();
+                        const nextSuggestion = suggestionsContainer.children[index + 1];
+                        if (nextSuggestion) {
+                            nextSuggestion.focus();
+                        }
+                    } else if (event.key === 'ArrowUp') {
+                        event.preventDefault();
+                        const previousSuggestion = suggestionsContainer.children[index - 1];
+                        if (previousSuggestion) {
+                            previousSuggestion.focus();
+                        } else {
+                            searchBar.focus();
+                        }
+                    } else if (event.key === 'Enter') {
+                        event.preventDefault();
+                        searchBar.value = suggestion;
+                        suggestionsContainer.innerHTML = '';
+                        searchBar.form.submit();
+                    }
+                });
             });
         }
     };
@@ -27,11 +52,14 @@ searchBar.addEventListener('input', () => {
     xhr.send();
 });
 
-document.addEventListener('click', (event) => {
-    if (!event.target.matches('.input') && !event.target.matches('.suggestion')) {
-        suggestionsContainer.innerHTML = '';
+// Ajout de l'evenement des touches pour la barre de recherche
+searchBar.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        searchBar.form.submit();
     }
 });
+
 
 /* code qui génére le footer en fonction de l'appareil */
 if (/Mobi/.test(navigator.userAgent))

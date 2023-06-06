@@ -1,0 +1,109 @@
+<html lang="en" data-lt-installed="true"><head><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-tiresias-page-script.js" id="dashlane_tiresias"></script><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-webauthn-page-script.js" id="dashlane_webauthn" name="forward_webauthn_ready"></script>
+  <meta charset="UTF-8">
+  <title>Miamateur: Recette Communauté</title>
+  <script src="../JS/index.js" defer=""></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../JS/communaute.js" defer=""></script>
+  <link rel="stylesheet" href="../CSS/communaute.css">
+  <link rel="stylesheet" href="../CSS/HEADER.css">
+  <link rel="stylesheet" href="../CSS/FOOTER.css">
+</head>
+<body>
+<header id="header">
+  <div class="Header-Container">
+    <!-- marge gauche -->
+    <span style="margin-left: 3%;"></span>
+
+    <!-- logo -->
+    <a href="../index.php">
+      <img src="../image/image-removebg-preview.jpg" class="logo">
+    </a>
+
+    <!-- titre -->
+    <a href="../index.php">
+      <h1 class="button-title">Miamateur</h1>
+    </a>
+
+    <!-- marge centre gauche -->
+    <span style="margin-left: 10%;"></span>
+
+    <!-- barre de recherche -->
+    <form class="input-wrapper" action="search.php" method="get" data-dashlane-rid="0f97bacc64ac0b1f" data-form-type="">
+      <input type="text" class="input" id="searchBar" name="search" placeholder="Rechercher une recette..." data-dashlane-rid="f6f6d449fc158e96" data-form-type="">
+      <button class="search-button" id="searchButton" data-dashlane-label="true" data-dashlane-rid="fe061d46b9fe8d7e" data-form-type="">
+        <span class="search-icon"></span>
+      </button>
+      <div id="suggestions-container"></div>
+    </form>
+    <!-- bouton compte -->
+    <a class="button-profile" href="connexion.php">Mon compte</a>
+  </div>
+
+  <div class="alignement_cote">
+    <div class="alignement">
+      <!-- les boutons du header (Acceuil, notre selection...) -->
+      <a class="header-button" href="../index.php" target="_self">Accueil</a>
+
+      <a class="header-button" href="selection.php" target="_self">Notre selection</a>
+
+      <a class="active header-button" href="communaute.php" target="_self">Tendance communautaire</a>
+
+      <a class="header-button" href="apropos.php" target="_self">A propos</a>
+
+      <a class="header-button" href="contact.php" target="_self">Contact</a>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="box">
+    <img src="../image/comu-img.jpeg">
+  </div>
+  <div class="section">
+    <h2>Recettes de la communauté</h2>
+  </div>
+  <div class="conteneur">
+    <div class="rectangle">
+      <p>Cette page rassemble les meilleures recettes de la communauté.<br>
+        Ici vous pourrez parcourir les recettes de la communauté à vos risques et périls.<br>
+        Attention, aucune règle n'est imposée ici.</p>
+    </div>
+  </div>
+  <div>
+    <div class="section">
+      <h2>Les Recettes</h2>
+    </div>
+    <div class="container" id="container" "="">
+    <ul><li><a href="recette.php?id=1"><img src="https://img-3.journaldesfemmes.fr/C5EOtA1h6Kn6_Jthz_R1nZWVOac=/1500x/smart/d72f4f8d3c6a45699a979e56df4b2d53/ccmcms-jdf/10820734.jpg"></a><h2>Frites croustillantes</h2></li><li><a href="recette.php?id=2"><img src="https://cloudfront-eu-central-1.images.arcpublishing.com/liberation/TMGCPQVUQJCSLHFXZPKABK4E4Q.jpg"></a><h2>Croque-monsieur à la sauce béchamel</h2></li><li><a href="recette.php?id=3"><img src="https://www.cuisine-et-mets.com/wp-content/uploads/2017/07/pizza-chorizo-opt.jpg"></a><h2>Pizza chorizo-poivron</h2></li><li><a href="recette.php?id=4"><img src="https://assets.afcdn.com/recipe/20180119/76936_w1024h768c1cx2680cy1786.jpg"></a><h2>Lasagnes à la bolognaise</h2></li></ul><ul><li><a href="recette.php?id=5"><img src="https://www.epicurien.be/magazine/00-img-epicurien/recettes-w2000/boeuf-bourguignon-cocotte-4.jpg"></a><h2>Boeuf bourguignon</h2></li><li><a href="recette.php?id=6"><img src="https://www.mycake.fr/wp-content/uploads/2020/11/rs_tiramisu_1x1.jpg"></a><h2>Tiramisu</h2></li><li><a href="recette.php?id=7"><img src="https://img.cuisineaz.com/660x660/2015/05/22/i10988-wraps.jpeg"></a><h2>Wrap au saumon fumé</h2></li><li><a href="recette.php?id=8"><img src="https://img.cuisineaz.com/660x660/2016/09/24/i91126-makis-saumon-et-avocat.jpg"></a><h2>Makis saumon, concombre, avocat</h2></li></ul><ul><li><a href="recette.php?id=9"><img src="https://www.izakaya-isse.fr/wp-content/uploads/2022/12/image-3.png"></a><h2>Ramens au Boeuf</h2></li><li><a href="recette.php?id=10"><img src="https://www.lidl-recettes.fr/var/site/storage/images/_aliases/960x720/2/4/4/9/89442-3-fre-FR/Onigiri.jpg"></a><h2>Onigiri</h2></li><li><a href="recette.php?id=11"><img src="https://cdn.pratico-pratiques.com/app/uploads/sites/2/2019/07/02111940/pennes-au-pesto-et-bacon.jpg"></a><h2>Pâtes au pesto</h2></li><li><a href=""><img src=""></a><h2></h2></li></ul></div>
+  <div class="rectangle-footer"></div>
+  </div></main>
+<footer class="show-footer">
+  <div id="lefooter">
+    <ul id="boutons-cliquables">
+      <li><a href="#" class="lien_footer">Accueil</a></li>
+      <li><a href="#" class="lien_footer">À propos</a></li>
+      <li><a href="#" class="lien_footer">Contact</a></li>
+    </ul>
+    <br>
+    <h2>Nos Réseaux</h2>
+    <ul id="social_media">
+      <div class="items_social">
+        <li><img src="../image/Instagram-logo.png" alt="insta"></li>
+        <li><a href="#" class="lien_footer_reseau">miamateur</a> </li>
+      </div>
+      <div class="items_social">
+        <li><img src="../image/facebook-logo.png" alt="facebook"> </li>
+        <li><a href="#" class="lien_footer_reseau">facemateur</a> </li>
+      </div>
+      <div class="items_social">
+        <li><img src="../image/pinterest-logo.png" alt="pinterest"> </li>
+        <li><a href="#" class="lien_footer_reseau">miamatart</a> </li>
+      </div>
+      <div class="items_social">
+        <li><img src="../image/twitter-logo.png" alt="twitter"> </li>
+        <li><a href="#" class="lien_footer_reseau">miamaster</a> </li>
+      </div>
+    </ul>
+  </div>
+</footer>
+<div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&0<notification.length&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim Deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$<span style='font-size: 80px;'>2.49</span>/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script>
+</body></html>
