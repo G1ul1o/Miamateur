@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="SEARCH BAR ON">
+    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="Commentaires du Header et footer">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +80,7 @@
       <workItem from="1684418401944" duration="425000" />
       <workItem from="1684766104919" duration="3746000" />
       <workItem from="1685798143368" duration="355000" />
+      <workItem from="1685902702972" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="add all files">
       <created>1683031694724</created>
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683120005747</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commentaires du Header et footer">
+      <created>1685903446143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685903446143</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +148,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Header-Footer" />
+                        <option value="origin/dev_siteV2" />
                       </list>
                     </value>
                   </entry>
@@ -157,6 +167,7 @@
     <MESSAGE value="UPDATE HEADER" />
     <MESSAGE value="NEW SEARCH FUNCTION" />
     <MESSAGE value="SEARCH BAR ON" />
-    <option name="LAST_COMMIT_MESSAGE" value="SEARCH BAR ON" />
+    <MESSAGE value="Commentaires du Header et footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commentaires du Header et footer" />
   </component>
 </project>
