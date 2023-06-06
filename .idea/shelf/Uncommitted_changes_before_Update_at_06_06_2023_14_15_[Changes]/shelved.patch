@@ -1,0 +1,74 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"61616e5f-4281-4511-b5af-59d96383eb02\" name=\"Changes\" comment=\"Commentaires du Header et footer\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/.name\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"dev_siteV2\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"C:\\wamp64\\bin\\php\\php8.0.26\\php.exe\" />\n  <component name=\"ProjectId\" id=\"2PER34EzZrdsapvwqrniJlVM5nD\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\wamp64\\www\\miamateur\\PHP\" />\n      <recent name=\"C:\\wamp64\\www\\miamateur\\HTML\" />\n      <recent name=\"C:\\wamp64\\www\\miamateur\\CSS\" />\n      <recent name=\"C:\\wamp64\\www\\miamateur\\JS\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"61616e5f-4281-4511-b5af-59d96383eb02\" name=\"Changes\" comment=\"\" />\n      <created>1683020051850</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1683020051850</updated>\n      <workItem from=\"1683020055568\" duration=\"3977000\" />\n      <workItem from=\"1683031567203\" duration=\"4318000\" />\n      <workItem from=\"1683038264289\" duration=\"1496000\" />\n      <workItem from=\"1683097770598\" duration=\"10997000\" />\n      <workItem from=\"1684418401944\" duration=\"425000\" />\n      <workItem from=\"1684766104919\" duration=\"3746000\" />\n      <workItem from=\"1685798143368\" duration=\"355000\" />\n      <workItem from=\"1685902702972\" duration=\"758000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"add all files\">\n      <created>1683031694724</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683031694724</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"new DB + formulaire files\">\n      <created>1683039095070</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683039095070</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"other files\">\n      <created>1683039205864</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683039205864</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"UPDATE HEADER\">\n      <created>1683099954330</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683099954330</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"NEW SEARCH FUNCTION\">\n      <created>1683107150763</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683107150763</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"SEARCH BAR ON\">\n      <created>1683120005747</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1683120005747</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Commentaires du Header et footer\">\n      <created>1685903446143</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685903446143</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"8\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"origin/dev_siteV2\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"add all files\" />\n    <MESSAGE value=\"new DB + formulaire files\" />\n    <MESSAGE value=\"other files\" />\n    <MESSAGE value=\"UPDATE HEADER\" />\n    <MESSAGE value=\"NEW SEARCH FUNCTION\" />\n    <MESSAGE value=\"SEARCH BAR ON\" />\n    <MESSAGE value=\"Commentaires du Header et footer\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Commentaires du Header et footer\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 26725e02233c157ecc6f02ce215f050d9b85a280)
++++ b/.idea/workspace.xml	(date 1686053570121)
+@@ -4,11 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="Commentaires du Header et footer">
+-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="61616e5f-4281-4511-b5af-59d96383eb02" name="Changes" comment="Centrage de la page à propos" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -32,6 +28,7 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -81,6 +78,7 @@
+       <workItem from="1684766104919" duration="3746000" />
+       <workItem from="1685798143368" duration="355000" />
+       <workItem from="1685902702972" duration="758000" />
++      <workItem from="1686053267081" duration="303000" />
+     </task>
+     <task id="LOCAL-00001" summary="add all files">
+       <created>1683031694724</created>
+@@ -131,7 +129,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685903446143</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Centrage de la page à propos">
++      <created>1686053431377</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1686053431377</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -148,7 +153,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/dev_siteV2" />
++                        <option value="origin/TechDay" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -168,6 +173,7 @@
+     <MESSAGE value="NEW SEARCH FUNCTION" />
+     <MESSAGE value="SEARCH BAR ON" />
+     <MESSAGE value="Commentaires du Header et footer" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Commentaires du Header et footer" />
++    <MESSAGE value="Centrage de la page à propos" />
++    <option name="LAST_COMMIT_MESSAGE" value="Centrage de la page à propos" />
+   </component>
+ </project>
+\ No newline at end of file

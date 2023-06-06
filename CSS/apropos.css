@@ -1,0 +1,70 @@
+#page-a-propos{
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 3%;
+}
+
+#bloc-a-propos{
+    border-collapse: collapse;
+    font-family: "Arial", sans-serif;
+    color : #696969;
+    text-decoration:none;
+}
+
+
+.underline {
+    text-align: center;
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 360px;
+    bottom: -3px;
+    width: 13%;
+    height: 2px;
+    background-color: #fab0b0; /* Couleur du soulignement */
+}
+
+
+@media all and (max-device-width: 600px)
+{
+    #page-a-propos{
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 80%;
+        margin-left: 7%;
+        padding: 3%;
+    }
+
+    #bloc-a-propos{
+        border-collapse: collapse;
+        font-family: "Arial", sans-serif;
+        color : #696969;
+        text-decoration:none;
+    }
+
+    .underline {
+        text-align: center;
+        position: relative;
+    }
+
+    .underline::after {
+        content: "";
+        position: absolute;
+        left: 80px;
+        bottom: -3px;
+        width: 24%;
+        height: 2px;
+        background-color: #f88282; /* Couleur du soulignement */
+    }
+}
